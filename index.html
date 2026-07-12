@@ -794,14 +794,17 @@
           <div><b>וואטסאפ</b><a href="https://wa.me/972505200261" target="_blank" rel="noopener">שלחו לנו הודעה ישירות</a></div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="return false;">
+      <form class="contact-form" id="contactForm">
         <h3>שליחת הודעה</h3>
+        <input type="hidden" name="access_key" value="333df161-07cc-4638-ab4c-1670eeb4379b">
+        <input type="hidden" name="subject" value="פנייה חדשה מאתר משרד עורכי הדין">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
-          <div class="field"><label for="fname">שם מלא</label><input id="fname" type="text" placeholder="השם שלכם" required></div>
-          <div class="field"><label for="fphone">טלפון</label><input id="fphone" type="tel" placeholder="05X-XXX-XXXX" required></div>
+          <div class="field"><label for="fname">שם מלא</label><input id="fname" name="name" type="text" placeholder="השם שלכם" required></div>
+          <div class="field"><label for="fphone">טלפון</label><input id="fphone" name="phone" type="tel" placeholder="05X-XXX-XXXX" required></div>
         </div>
         <div class="field"><label for="fservice">תחום משפטי</label>
-          <select id="fservice">
+          <select id="fservice" name="service">
             <option>מקרקעין</option>
             <option>הוצאה לפועל</option>
             <option>ביטוח לאומי</option>
@@ -810,8 +813,9 @@
             <option>דיני חברות</option>
           </select>
         </div>
-        <div class="field"><label for="fmsg">הודעה</label><textarea id="fmsg" placeholder="תארו בקצרה את המצב שלכם..."></textarea></div>
+        <div class="field"><label for="fmsg">הודעה</label><textarea id="fmsg" name="message" placeholder="תארו בקצרה את המצב שלכם..."></textarea></div>
         <button type="submit" class="btn btn-navy" style="width:100%; margin-top:6px;">בקשת פגישת ייעוץ</button>
+        <p id="formStatus" style="text-align:center; margin-top:10px; font-size:14.5px; display:none;"></p>
       </form>
     </div>
   </div>
@@ -915,6 +919,40 @@
   const cardWidth = 402;
   document.getElementById('testiNext').addEventListener('click', ()=> track.scrollBy({left:-cardWidth, behavior:'smooth'}));
   document.getElementById('testiPrev').addEventListener('click', ()=> track.scrollBy({left:cardWidth, behavior:'smooth'}));
+
+  // Contact form submission (Web3Forms)
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  contactForm.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'שולח...';
+    formStatus.style.display = 'none';
+
+    try{
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(contactForm)
+      });
+      const data = await res.json();
+      if(data.success){
+        formStatus.textContent = 'הפנייה נשלחה בהצלחה! ניצור איתכם קשר בהקדם.';
+        formStatus.style.color = '#2e7d32';
+        contactForm.reset();
+      } else {
+        throw new Error(data.message || 'שגיאה בשליחה');
+      }
+    } catch(err){
+      formStatus.textContent = 'אירעה שגיאה בשליחת הטופס. נסו שוב או צרו קשר בטלפון.';
+      formStatus.style.color = '#c62828';
+    } finally {
+      formStatus.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'בקשת פגישת ייעוץ';
+    }
+  });
 
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
