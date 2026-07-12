@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 
-  /* ============ TOKENS ============ */
   :root{
     --navy: #0F2D52;
     --navy-deep: #0A1E38;
@@ -83,7 +82,6 @@
 
   :focus-visible{outline:2.5px solid var(--gold-deep); outline-offset:3px;}
 
-  /* ============ BUTTONS ============ */
   .btn{
     display:inline-flex; align-items:center; justify-content:center; gap:9px;
     padding:15px 28px;
@@ -107,7 +105,6 @@
   .btn-ghost-navy:hover{ border-color:var(--navy); background:var(--cream);}
   .btn-sm{padding:11px 20px; font-size:14px;}
 
-  /* ============ HEADER ============ */
   header{
     position:sticky; top:0; z-index:200;
     background:rgba(255,255,255,0.92);
@@ -149,7 +146,6 @@
   .menu-toggle{display:none; background:none; border:none; padding:6px;}
   .menu-toggle span{display:block; width:24px; height:2px; background:var(--navy); margin:5px 0; transition:.3s;}
 
-  /* ============ HERO ============ */
   .hero{
     background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 62%, var(--navy-soft) 100%);
     color:#fff;
@@ -214,7 +210,6 @@
   .hero-art .card-float b{display:block; font-size:14px; font-family:'Frank Ruhl Libre',serif; font-weight:600;}
   .hero-art .card-float span{font-size:12px; color:var(--ink-soft);}
 
-  /* ============ SECTIONS COMMON ============ */
   .section{padding:104px 0;}
   .section.tight{padding:84px 0;}
   .section-head{max-width:640px; margin-bottom:56px;}
@@ -226,7 +221,6 @@
   .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* ============ WHY CHOOSE US ============ */
   .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
   .why-card{
     background:#fff; border:1px solid var(--stone); border-radius:var(--radius-m);
@@ -241,7 +235,6 @@
   .why-card h3{font-size:19px; margin-bottom:9px;}
   .why-card p{font-size:14.5px; color:var(--ink-soft);}
 
-  /* ============ PRACTICE AREAS ============ */
   .practice-grid{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;
   }
@@ -285,7 +278,6 @@
   .practice-card:not(.featured) .p-ico{background:var(--cream); border-color:var(--stone); color:var(--gold-deep);}
   .practice-card:not(.featured) .link{color:var(--gold-deep);}
 
-  /* ============ ABOUT ============ */
   .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
   .about-portrait{
     position:relative; border-radius:var(--radius-l);
@@ -314,7 +306,6 @@
   .value-item b{display:block; font-family:'Frank Ruhl Libre',serif; font-size:16px; color:var(--navy); margin-bottom:3px;}
   .value-item span{font-size:13px; color:var(--ink-soft);}
 
-  /* ============ CTA BANNER ============ */
   .cta-banner{
     background:linear-gradient(120deg, var(--navy-deep), var(--navy) 60%, var(--navy-soft));
     color:#fff; border-radius:var(--radius-l); padding:64px 60px;
@@ -330,7 +321,6 @@
   .cta-banner p{color:rgba(255,255,255,0.72); font-size:15.5px;}
   .cta-banner .ctas{position:relative; z-index:2; display:flex; gap:14px; flex-wrap:wrap;}
 
-  /* ============ TESTIMONIALS ============ */
   .testi-track{
     display:flex; gap:22px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:10px;
     -ms-overflow-style:none; scrollbar-width:none;
@@ -357,7 +347,6 @@
   }
   .testi-nav button:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
 
-  /* ============ FAQ ============ */
   .faq-list{max-width:780px;}
   .faq-item{border-bottom:1px solid var(--stone);}
   .faq-q{
@@ -379,7 +368,6 @@
   .faq-a{max-height:0; overflow:hidden; transition:max-height .4s var(--ease);}
   .faq-a p{padding:0 4px 24px; color:var(--ink-soft); font-size:15.5px; max-width:640px;}
 
-  /* ============ CONTACT ============ */
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:0; border-radius:var(--radius-l); overflow:hidden; box-shadow:var(--shadow-m);}
   .contact-info{background:var(--navy); color:#fff; padding:56px 48px;}
   .contact-info h3{color:#fff; font-size:25px; margin-bottom:14px;}
@@ -406,7 +394,6 @@
   .field textarea{resize:vertical; min-height:90px;}
   .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
 
-  /* ============ FOOTER ============ */
   footer{background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:70px 0 28px;}
   .footer-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; margin-bottom:52px;}
   .footer-logo{display:flex; align-items:center; gap:10px; color:#fff; font-family:'Frank Ruhl Libre',serif; font-size:18.5px; font-weight:600; margin-bottom:16px;}
@@ -420,7 +407,6 @@
   .footer-bottom .links{display:flex; gap:22px; flex-wrap:wrap;}
   .footer-bottom a:hover{color:var(--gold-light);}
 
-  /* ============ STICKY MOBILE CTA ============ */
   .sticky-cta{
     position:fixed; bottom:0; left:0; right:0; z-index:300;
     display:none; gap:1px; background:var(--stone);
@@ -440,7 +426,6 @@
   }
   .fab-wa:hover{transform:scale(1.08);}
 
-  /* ============ RESPONSIVE ============ */
   @media (max-width: 980px){
     nav.primary{display:none;}
     .menu-toggle{display:block;}
@@ -476,7 +461,6 @@
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
@@ -507,7 +491,6 @@
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -559,7 +542,6 @@
   </div>
 </section>
 
-<!-- ============ WHO WE HELP ============ -->
 <section class="section bg-cream" id="who">
   <div class="wrap">
     <div class="section-head reveal">
@@ -582,7 +564,6 @@
   </div>
 </section>
 
-<!-- ============ WHY CHOOSE US ============ -->
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
@@ -625,7 +606,6 @@
   </div>
 </section>
 
-<!-- ============ PRACTICE AREAS ============ -->
 <section class="section bg-cream" id="practice">
   <div class="wrap">
     <div class="section-head reveal">
@@ -674,7 +654,6 @@
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
 <section class="section" id="about">
   <div class="wrap about-grid">
     <div class="about-portrait reveal">
@@ -702,7 +681,6 @@
   </div>
 </section>
 
-<!-- ============ CTA BANNER ============ -->
 <section class="section tight">
   <div class="wrap">
     <div class="cta-banner reveal">
@@ -722,7 +700,6 @@
   </div>
 </section>
 
-<!-- ============ TESTIMONIALS ============ -->
 <section class="section bg-cream">
   <div class="wrap">
     <div class="section-head reveal">
@@ -758,7 +735,6 @@
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
 <section class="section" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
@@ -786,7 +762,6 @@
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
 <section class="section bg-cream" id="contact">
   <div class="wrap">
     <div class="section-head reveal">
@@ -842,7 +817,6 @@
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -896,7 +870,6 @@
   </div>
 </footer>
 
-<!-- ============ STICKY MOBILE CTA ============ -->
 <div class="sticky-cta">
   <a href="tel:+972505200261" class="sc-call">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
