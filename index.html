@@ -256,6 +256,12 @@
     content:''; position:absolute; inset:0;
     background:radial-gradient(circle at 15% 8%, rgba(200,167,93,0.22), transparent 55%);
   }
+  .practice-card .card-art{
+    position:absolute; top:0; left:0; right:0; z-index:1;
+    display:flex; justify-content:center; padding-top:36px;
+    opacity:0.5; pointer-events:none;
+  }
+  .practice-card .card-art svg{width:62%; max-width:230px; height:auto;}
   .practice-card .p-ico{
     position:relative; z-index:2;
     width:44px; height:44px; border-radius:10px;
@@ -616,7 +622,18 @@
     </div>
     <div class="practice-grid">
       <a href="#" class="practice-card featured reveal">
-        <div class="p-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v15l7-4 8 4 7-4V2l-7 4-8-4z"/><path d="M8 2v15M16 6v15"/></svg></div>
+        <div class="card-art">
+          <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="60" width="160" height="110" rx="2" stroke="#E3CE9E" stroke-width="1.3" opacity="0.85"/>
+            <rect x="50" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6"/>
+            <rect x="96" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6"/>
+            <rect x="142" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6"/>
+            <rect x="96" y="140" width="28" height="30" stroke="#C8A75D" stroke-width="1.3" opacity="0.9"/>
+            <path d="M20 60L110 5L200 60" stroke="#C8A75D" stroke-width="1.6"/>
+            <circle cx="110" cy="5" r="3.2" fill="#C8A75D"/>
+          </svg>
+        </div>
+        <div class="p-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3-3.5 3.5zm0 0L19 4"/></svg></div>
         <h3>מקרקעין</h3>
         <p>קנייה ומכירה של דירות, עסקאות קרקע, בדיקות טאבו וזכויות, הסכמי שיתוף ופירוק שיתוף, ירושה ומקרקעין, ורישום זכויות, מהצעה ראשונה ועד רישום סופי.</p>
         <span class="link">לפרטים נוספים על מקרקעין ←</span>
