@@ -246,8 +246,11 @@
     display:flex; flex-direction:column; justify-content:flex-end;
     transition:transform .4s var(--ease), box-shadow .4s var(--ease);
     border:1px solid var(--navy);
+    width:100%; font-family:inherit; text-align:right; cursor:pointer; margin:0;
+    -webkit-appearance:none; appearance:none;
   }
   .practice-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-l);}
+  .practice-card:focus-visible{outline:2.5px solid var(--gold); outline-offset:3px;}
   .practice-card.featured{
     grid-column:span 2; grid-row:span 2; min-height:466px;
     background:linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
@@ -432,6 +435,56 @@
     transition:transform .3s var(--ease);
   }
   .fab-wa:hover{transform:scale(1.08);}
+
+  /* ============ SERVICE DETAIL MODAL ============ */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:600;
+    background:rgba(10,30,56,0.6); backdrop-filter:blur(4px);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    opacity:0; visibility:hidden; transition:opacity .3s var(--ease), visibility 0s linear .3s;
+  }
+  .modal-overlay.open{ opacity:1; visibility:visible; transition:opacity .3s var(--ease); }
+  .modal-panel{
+    background:#fff; border-radius:var(--radius-l); width:100%; max-width:660px;
+    max-height:86vh; overflow-y:auto; position:relative;
+    padding:48px 44px 40px; box-shadow:var(--shadow-l);
+    transform:translateY(24px) scale(0.98); transition:transform .35s var(--ease);
+  }
+  .modal-overlay.open .modal-panel{ transform:translateY(0) scale(1); }
+  .modal-close{
+    position:absolute; top:20px; left:20px; width:38px; height:38px; border-radius:50%;
+    border:1px solid var(--stone); background:var(--cream); color:var(--navy);
+    display:flex; align-items:center; justify-content:center; font-size:16px; transition:.25s;
+  }
+  .modal-close:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
+  .modal-icon{
+    width:52px; height:52px; border-radius:12px; background:var(--navy); color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  }
+  .modal-panel .eyebrow{margin-bottom:10px;}
+  .modal-panel h3{font-size:clamp(24px,2.6vw,30px); margin-bottom:20px;}
+  .modal-body p{color:var(--ink-soft); font-size:15.5px; margin-bottom:16px;}
+  .modal-body h4{
+    font-family:'Heebo',sans-serif; font-weight:700; font-size:14.5px; color:var(--navy);
+    margin:22px 0 12px;
+  }
+  .modal-body ul{margin-bottom:16px;}
+  .modal-body ul li{
+    position:relative; padding-right:22px; margin-bottom:10px; font-size:15px; color:var(--ink-soft);
+  }
+  .modal-body ul li::before{
+    content:''; position:absolute; right:0; top:8px; width:7px; height:7px; border-radius:50%;
+    background:var(--gold-deep);
+  }
+  .modal-cta{
+    display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; padding-top:26px;
+    border-top:1px solid var(--stone);
+  }
+  @media (max-width:640px){
+    .modal-panel{padding:60px 24px 30px; max-height:90vh;}
+    .modal-cta{flex-direction:column;}
+    .modal-cta .btn{width:100%;}
+  }
 
   @media (max-width: 980px){
     nav.primary{display:none;}
@@ -621,7 +674,7 @@
       <p>עסקאות מקרקעין הן ליבת העשייה שלנו, לצד מגוון שירותים אזרחיים לרגעים החשובים ביותר.</p>
     </div>
     <div class="practice-grid">
-      <a href="#" class="practice-card featured reveal">
+      <button type="button" class="practice-card featured reveal" data-service="realestate">
         <div class="card-art">
           <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="30" y="60" width="160" height="110" rx="2" stroke="#E3CE9E" stroke-width="1.3" opacity="0.85"/>
@@ -634,40 +687,52 @@
           </svg>
         </div>
         <div class="p-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3-3.5 3.5zm0 0L19 4"/></svg></div>
-        <h3>מקרקעין</h3>
-        <p>קנייה ומכירה של דירות, עסקאות קרקע, בדיקות טאבו וזכויות, הסכמי שיתוף ופירוק שיתוף, ירושה ומקרקעין, ורישום זכויות, מהצעה ראשונה ועד רישום סופי.</p>
-        <span class="link">לפרטים נוספים על מקרקעין ←</span>
-      </a>
-      <a href="#" class="practice-card reveal">
+        <h3>מקרקעין, תכנון ובנייה</h3>
+        <p>קנייה ומכירה של דירות וקרקעות, בדיקות זכויות וטאבו, היתרי בנייה וחריגות בנייה, הסכמי שיתוף ופירוק שיתוף, ירושה ורישום זכויות, מהצעה ראשונה ועד רישום סופי.</p>
+        <span class="link">לפרטים המלאים על מקרקעין ←</span>
+      </button>
+      <button type="button" class="practice-card reveal" data-service="execution">
         <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <h3>הוצאה לפועל</h3>
-        <p>ייצוג חייבים וזוכים בתיקי הוצאה לפועל.</p>
+        <p>ייצוג זוכים וחייבים: פתיחת תיקים, ביטול עיקולים והגבלות, צווי תשלומים והסדרי חוב.</p>
         <span class="link">למידע נוסף ←</span>
-      </a>
-      <a href="#" class="practice-card reveal">
+      </button>
+      <button type="button" class="practice-card reveal" data-service="bituach">
         <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
         <h3>ביטוח לאומי</h3>
-        <p>תביעות וערעורים מול המוסד לביטוח לאומי.</p>
+        <p>תביעות נכות כללית ותאונות עבודה, הכנה לוועדות רפואיות והגשת עררים מול המוסד לביטוח לאומי.</p>
         <span class="link">למידע נוסף ←</span>
-      </a>
-      <a href="#" class="practice-card reveal">
+      </button>
+      <button type="button" class="practice-card reveal" data-service="workaccident">
+        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>תאונות עבודה</h3>
+        <p>מיצוי זכויות מול הביטוח הלאומי וגורם אחראי לתאונה: דמי פגיעה, קביעת נכות ותביעות פיצויים נוספות.</p>
+        <span class="link">למידע נוסף ←</span>
+      </button>
+      <button type="button" class="practice-card reveal" data-service="malpractice">
         <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
         <h3>רשלנות רפואית</h3>
         <p>ייצוג רגיש ומקצועי ללקוחות שנפגעו מרשלנות רפואית.</p>
         <span class="link">למידע נוסף ←</span>
-      </a>
-      <a href="#" class="practice-card reveal">
+      </button>
+      <button type="button" class="practice-card reveal" data-service="torts">
         <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg></div>
-        <h3>נזיקין</h3>
-        <p>מיצוי זכויות לפיצוי הוגן בגין נזקי גוף ועוולות אזרחיות.</p>
+        <h3>נזיקין ופיצויים</h3>
+        <p>ייצוג נפגעי תאונות דרכים, נפילות ורשלנות, ומיצוי פיצוי מלא מול המזיק וחברות הביטוח.</p>
         <span class="link">למידע נוסף ←</span>
-      </a>
-      <a href="#" class="practice-card reveal">
+      </button>
+      <button type="button" class="practice-card reveal" data-service="contractors">
+        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
+        <h3>רישום קבלנים</h3>
+        <p>ליווי בהליכי רישום והעלאת סיווג בפנקס הקבלנים, והתמודדות מול החלטות רשם הקבלנים.</p>
+        <span class="link">למידע נוסף ←</span>
+      </button>
+      <button type="button" class="practice-card reveal" data-service="civil">
         <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
-        <h3>דיני חברות</h3>
-        <p>הקמה, חוזים וליווי שוטף לחברות ובעלי עסקים.</p>
+        <h3>משפט אזרחי וחוזים</h3>
+        <p>ניסוח חוזים, תביעות כספיות וייצוג בסכסוכים אזרחיים, מייעוץ מקדים ועד ליטיגציה.</p>
         <span class="link">למידע נוסף ←</span>
-      </a>
+      </button>
     </div>
   </div>
 </section>
@@ -772,6 +837,14 @@
         <button class="faq-q"><span class="qtext">כיצד נפתרים סכסוכי שיתוף בנכס?</span><span class="plus"></span></button>
         <div class="faq-a"><p>רוב עניני השיתוף, בין בני משפחה או שותפים, ניתנים לפתרון באמצעות משא ומתן או חלוקה פורמלית של הנכס. כאשר אין אפשרות להגיע להסכמה, אנו מייצגים את האינטרסים שלכם בגישור או בהליכים משפטיים.</p></div>
       </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qtext">נפגעתי בתאונת עבודה, לאילו זכויות אני זכאי?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>בהתאם לנסיבות, ייתכן שתהיו זכאים לדמי פגיעה, לקביעת דרגת נכות מעבודה ולגמלה בהתאם, ולעיתים גם לתביעת פיצויים נוספת נגד גורם אחראי לתאונה. אנו בוחנים את שני המסלולים במקביל כדי למצות עבורכם את מלוא הזכויות.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qtext">מה זו ועדה רפואית וכיצד מתכוננים אליה?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>ועדה רפואית קובעת את דרגת הנכות שלכם מול הביטוח הלאומי, וההחלטה משפיעה ישירות על הזכויות הכספיות שלכם. אנו מלווים אתכם בהכנת המסמכים הרפואיים ובהצגת המגבלות בצורה מלאה, ומייצגים גם בהגשת ערר אם ההחלטה אינה משקפת את מצבכם.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -819,12 +892,14 @@
         </div>
         <div class="field"><label for="fservice">תחום משפטי</label>
           <select id="fservice" name="service">
-            <option>מקרקעין</option>
+            <option>מקרקעין, תכנון ובנייה</option>
             <option>הוצאה לפועל</option>
             <option>ביטוח לאומי</option>
+            <option>תאונות עבודה</option>
             <option>רשלנות רפואית</option>
-            <option>נזיקין</option>
-            <option>דיני חברות</option>
+            <option>נזיקין ופיצויים</option>
+            <option>רישום קבלנים</option>
+            <option>משפט אזרחי וחוזים</option>
           </select>
         </div>
         <div class="field"><label for="fmsg">הודעה</label><textarea id="fmsg" name="message" placeholder="תארו בקצרה את המצב שלכם..."></textarea></div>
@@ -860,12 +935,14 @@
       <div class="footer-col">
         <h4>תחומי עיסוק</h4>
         <ul>
-          <li><a href="#">מקרקעין</a></li>
-          <li><a href="#">הוצאה לפועל</a></li>
-          <li><a href="#">ביטוח לאומי</a></li>
-          <li><a href="#">רשלנות רפואית</a></li>
-          <li><a href="#">נזיקין</a></li>
-          <li><a href="#">דיני חברות</a></li>
+          <li><a href="#practice">מקרקעין, תכנון ובנייה</a></li>
+          <li><a href="#practice">הוצאה לפועל</a></li>
+          <li><a href="#practice">ביטוח לאומי</a></li>
+          <li><a href="#practice">תאונות עבודה</a></li>
+          <li><a href="#practice">רשלנות רפואית</a></li>
+          <li><a href="#practice">נזיקין ופיצויים</a></li>
+          <li><a href="#practice">רישום קבלנים</a></li>
+          <li><a href="#practice">משפט אזרחי וחוזים</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -903,7 +980,162 @@
   <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6zM12.06 18.4a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.66.67-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.08z"/></svg>
 </a>
 
+<!-- ============ SERVICE DETAIL MODAL ============ -->
+<div class="modal-overlay" id="serviceModal" role="presentation">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="modalClose" aria-label="סגירה">✕</button>
+    <div class="modal-icon" id="modalIcon"></div>
+    <span class="eyebrow">תחום עיסוק</span>
+    <h3 id="modalTitle"></h3>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-cta">
+      <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z"/></svg>
+        וואטסאפ בנושא זה
+      </a>
+      <a href="#contact" class="btn btn-navy" id="modalContactLink">קביעת פגישת ייעוץ</a>
+    </div>
+  </div>
+</div>
+
 <script>
+  // Service detail content (populates the modal)
+  const serviceDetails = {
+    realestate: `
+      <p>תחום המקרקעין, התכנון והבנייה הוא אחד התחומים המורכבים והמשמעותיים ביותר במשפט האזרחי. עסקאות נדל"ן, ייזום, היתרי בנייה, שינויי ייעוד וסכסוכים קנייניים כרוכים בסוגיות משפטיות, תכנוניות וכלכליות, ולכן דורשים בחינה מקצועית וליווי צמוד כבר בשלב מוקדם.</p>
+      <h4>הליווי המשפטי שלנו כולל</h4>
+      <ul>
+        <li>בדיקת מצב הזכויות והמצב התכנוני של הנכס</li>
+        <li>בדיקת היתרי בנייה, טופסי אכלוס ואיתור חריגות בנייה</li>
+        <li>בחינת היטלי השבחה וחיובי מס מקרקעין</li>
+        <li>ניסוח הסכמי מכר, מתנה ושיתוף וניהול משא ומתן</li>
+        <li>פירוק שיתוף במקרקעין ורישום זכויות בטאבו וברשות מקרקעי ישראל</li>
+        <li>ליווי בהוצאת היתרי בנייה וייצוג מול ועדות התכנון המקומיות והמחוזיות</li>
+      </ul>
+      <p>המשרד פועל על בסיס חוק המקרקעין, חוק המכר (דירות) וחוק התכנון והבנייה, ומלווה כל תיק מהבדיקה הראשונית ועד לרישום הסופי.</p>
+    `,
+    execution: `
+      <p>מערכת ההוצאה לפועל נועדה לאפשר אכיפה יעילה של פסקי דין, שטרות, שיקים וחיובים כספיים, ולצד זאת מבטיחה גם את זכויותיהם של חייבים במסגרת הסדרים והליכים הקבועים בחוק.</p>
+      <h4>השירותים שלנו כוללים</h4>
+      <ul>
+        <li>פתיחת תיקי הוצאה לפועל וגביית חובות מכוח פסקי דין</li>
+        <li>ביצוע שטרות ושיקים והגשת התנגדות לביצוע שטר</li>
+        <li>הגשת התנגדות לתביעה על סכום קצוב ואיחוד תיקים</li>
+        <li>ביטול או צמצום עיקולים והגבלות על חשבון בנק, רישיון נהיגה ויציאה מהארץ</li>
+        <li>בקשות בטענת "פרעתי" וצווי תשלומים</li>
+        <li>ניהול משא ומתן להסדרי חוב וייצוג בפני רשמי ההוצאה לפועל</li>
+      </ul>
+      <p>אנו מייצגים זוכים החל מפתיחת התיק ועד לגביית החוב בפועל, וכן חייבים המבקשים להתמודד עם החוב בדרך המשפטית הנכונה.</p>
+    `,
+    bituach: `
+      <p>המוסד לביטוח לאומי מעניק זכויות סוציאליות שונות במצבים שבהם נפגעה יכולתו של אדם לעבוד, להתפרנס או לנהל אורח חיים עצמאי. הגשת תביעה, הכנת מסמכים רפואיים והופעה בפני ועדות רפואיות דורשות היכרות עם הדין וההליך.</p>
+      <h4>אנו מלווים בתחומים הבאים</h4>
+      <ul>
+        <li>תביעות נכות כללית ובחינת הזכאות בהתאם לתנאים הקבועים בחוק</li>
+        <li>נפגעי עבודה ותאונות עבודה מול המוסד לביטוח לאומי</li>
+        <li>הכנה לוועדות רפואיות והצגת המצב הרפואי והתפקודי</li>
+        <li>הגשת עררים וערעורים על החלטות שגויות או חלקיות</li>
+        <li>ניידות, סיעוד, שירותים מיוחדים וזכויות נפגעי פעולות איבה</li>
+      </ul>
+      <p>ההליך מבוסס על חוק הביטוח הלאומי ותקנותיו, וטיפול נכון ומקצועי עשוי להשפיע באופן משמעותי על מיצוי הזכויות המגיעות לכם.</p>
+    `,
+    workaccident: `
+      <p>תאונת עבודה עלולה לשנות חיים בתוך זמן קצר ולהשפיע על הבריאות, היכולת לעבוד וההכנסה. עובד שנפגע במהלך עבודתו או עקב עבודתו עשוי להיות זכאי לזכויות מול המוסד לביטוח לאומי, ולעיתים גם לפיצוי נוסף מגורם אחראי.</p>
+      <h4>מה נחשב לתאונת עבודה</h4>
+      <ul>
+        <li>פגיעה שאירעה במהלך ביצוע העבודה, או בדרך אליה וממנה</li>
+        <li>פגיעה עקב תנאי עבודה מסוכנים או שימוש בציוד ומכונות</li>
+        <li>פגיעה מתמשכת עקב מאמץ חוזר (מיקרוטראומה) או מחלת מקצוע מוכרת</li>
+      </ul>
+      <h4>זכויות אפשריות לנפגע</h4>
+      <ul>
+        <li>דמי פגיעה לתקופת אי הכושר הראשונית</li>
+        <li>קביעת דרגת נכות מעבודה באמצעות ועדה רפואית</li>
+        <li>מענק או קצבת נכות בהתאם לאחוזי הנכות שייקבעו</li>
+        <li>תביעה נזיקית נוספת נגד מעסיק, קבלן או גורם אחראי אחר</li>
+      </ul>
+      <p>אנו בוחנים במקביל את שני המסלולים האפשריים, מול הביטוח הלאומי ומול הגורם האחראי, כדי למצות עבורכם את מלוא הזכויות.</p>
+    `,
+    malpractice: `
+      <p>כאשר נגרם נזק עקב טיפול רפואי רשלני, בין אם באבחון, בטיפול או במעקב, ייתכן שקמה לנפגע זכות לפיצוי בגין הנזק שנגרם לו ולבני משפחתו.</p>
+      <h4>הליווי שלנו כולל</h4>
+      <ul>
+        <li>בדיקה מעמיקה של התיק הרפואי ואיסוף חוות דעת מקצועיות</li>
+        <li>בחינת קיומה של רשלנות והקשר הסיבתי בין הטיפול לנזק</li>
+        <li>הערכת היקף הנזק והפיצוי המגיע</li>
+        <li>ניהול משא ומתן מול חברות הביטוח והגורמים הרפואיים</li>
+        <li>ייצוג בהליכים משפטיים במקרה הצורך</li>
+      </ul>
+      <p>מדובר בתיקים מורכבים ורגישים במיוחד, ואנו מקפידים על ליווי אישי ותומך לצד עבודה משפטית יסודית ומדויקת.</p>
+    `,
+    torts: `
+      <p>דיני הנזיקין עוסקים באחריות של אדם, גוף או רשות לנזק שנגרם לאחר. כאשר אדם נפגע עקב מעשה או מחדל של גורם אחר, עשויה לקום לו זכות לפיצוי בהתאם לנסיבות המקרה ולהוראות הדין.</p>
+      <h4>אנו מטפלים במגוון מקרים, ובהם</h4>
+      <ul>
+        <li>תאונות דרכים, גם כשיש מחלוקת על נסיבות התאונה או היקף הנזק</li>
+        <li>נפילות ופגיעות במקומות ציבוריים עקב מפגע או תחזוקה לקויה</li>
+        <li>רשלנות ואחריות מקצועית של בעל מקצוע או גוף אחר</li>
+        <li>תביעות נגד חברות ביטוח שדחו תביעה או צמצמו את הפיצוי</li>
+      </ul>
+      <h4>פיצויים אפשריים</h4>
+      <p>בהתאם לנסיבות המקרה, ניתן לבחון זכאות לפיצוי בגין כאב וסבל, הפסדי שכר בעבר ובעתיד, פגיעה בכושר ההשתכרות, הוצאות רפואיות ושיקומיות, עזרת צד שלישי ונזקי רכוש.</p>
+    `,
+    contractors: `
+      <p>רישום בפנקס הקבלנים הוא תנאי הכרחי לביצוע עבודות מסוימות בענף הבנייה. הרישום מעניק לקבלן הכרה רשמית ומאפשר לו לבצע עבודות בהתאם לסיווגו ולהיקף הכספי שנקבע לו.</p>
+      <h4>אנו מלווים בהליכים הבאים</h4>
+      <ul>
+        <li>הגשת בקשה לרישום קבלן חדש בפנקס הקבלנים</li>
+        <li>שינוי, הרחבה או העלאה של סיווג קבלני קיים</li>
+        <li>השלמת מסמכים וייצוג מול רשם הקבלנים</li>
+        <li>טיפול בסירוב לרישום או בדרישה להשלמת נתונים</li>
+        <li>הגשת השגות ועררים על החלטות רשם הקבלנים</li>
+      </ul>
+      <p>בקשה שאינה ערוכה כנדרש עלולה לגרום לעיכובים ואף לדחייה, ולכן ליווי משפטי מסודר כבר מתחילת התהליך חוסך זמן וכסף.</p>
+    `,
+    civil: `
+      <p>המשפט האזרחי מהווה את התשתית המשפטית להסדרת מערכות היחסים, החובות והזכויות בין אדם לחברו, בין עסקים ובין פרטים לתאגידים. תחום זה נועד להבטיח כיבוד הסכמים, הגנה על זכויות קנייניות ומענה משפטי הוגן ויעיל.</p>
+      <h4>הליווי שלנו כולל</h4>
+      <ul>
+        <li>ניסוח ועריכת חוזים הבונים הסכמים צופי פני עתיד ומגנים על האינטרסים שלכם</li>
+        <li>ניהול תביעות כספיות וסכסוכים אזרחיים בבתי המשפט, בבוררות או בגישור</li>
+        <li>ייעוץ ואסטרטגיה קדם משפטית, כולל בחינת הראיות והערכת סיכויי התביעה</li>
+      </ul>
+      <p>במשפט האזרחי, ללוחות הזמנים כמו תקופת ההתיישנות ומועדי הגשת כתבי טענות יש משמעות מכרעת על תוצאת ההליך, ולכן חשוב לפנות לייעוץ מוקדם ככל האפשר.</p>
+    `
+  };
+
+  const serviceModal = document.getElementById('serviceModal');
+  const modalPanel = serviceModal.querySelector('.modal-panel');
+  const modalIcon = document.getElementById('modalIcon');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalBody = document.getElementById('modalBody');
+  let lastFocusedCard = null;
+
+  function openServiceModal(card){
+    const key = card.dataset.service;
+    if(!serviceDetails[key]) return;
+    lastFocusedCard = card;
+    modalIcon.innerHTML = card.querySelector('.p-ico').innerHTML;
+    modalTitle.textContent = card.querySelector('h3').textContent;
+    modalBody.innerHTML = serviceDetails[key];
+    serviceModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalClose').focus();
+  }
+  function closeServiceModal(){
+    serviceModal.classList.remove('open');
+    document.body.style.overflow = '';
+    if(lastFocusedCard) lastFocusedCard.focus();
+  }
+
+  document.querySelectorAll('.practice-card').forEach(card=>{
+    card.addEventListener('click', ()=> openServiceModal(card));
+  });
+  document.getElementById('modalClose').addEventListener('click', closeServiceModal);
+  document.getElementById('modalContactLink').addEventListener('click', closeServiceModal);
+  serviceModal.addEventListener('click', (e)=>{ if(e.target === serviceModal) closeServiceModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && serviceModal.classList.contains('open')) closeServiceModal(); });
+
   // Reveal on scroll
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
