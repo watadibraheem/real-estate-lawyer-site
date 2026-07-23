@@ -1,1007 +1,2180 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>עורך דין מקרקעין | ליווי עסקאות נדל״ן וקרקעות בכל הארץ · כפר קרע</title>
-<meta name="description" content="עורך דין מקרקעין המעניק ליווי משפטי מלא בעסקאות נדל״ן וקרקעות, מבדיקת הזכויות ועד לרישום הסופי. שבע שנות ניסיון ושירות אישי בפריסה ארצית, מכפר קרע.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>עורך דין מקרקעין | ליווי עסקאות נדל״ן וקרקעות בכל הארץ · כפר קרע</title>
+  <meta name="description"
+    content="עורך דין מקרקעין המעניק ליווי משפטי מלא בעסקאות נדל״ן וקרקעות, מבדיקת הזכויות ועד לרישום הסופי. שבע שנות ניסיון ושירות אישי בפריסה ארצית, מכפר קרע.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0F2D52;
+      --navy-deep: #0A1E38;
+      --navy-soft: #1C3D68;
+      --gold: #C8A75D;
+      --gold-light: #E3CE9E;
+      --gold-deep: #A9843F;
+      --cream: #FAF7F1;
+      --ivory: #FFFFFF;
+      --ink: #1B2430;
+      --ink-soft: #56606E;
+      --stone: #E7E1D4;
+      --whatsapp: #1F8A57;
+      --radius-s: 6px;
+      --radius-m: 14px;
+      --radius-l: 26px;
+      --shadow-s: 0 2px 10px rgba(15, 45, 82, 0.06);
+      --shadow-m: 0 12px 36px rgba(15, 45, 82, 0.10);
+      --shadow-l: 0 24px 60px rgba(15, 45, 82, 0.16);
+      --ease: cubic-bezier(.22, .61, .36, 1);
+    }
 
-  :root{
-    --navy: #0F2D52;
-    --navy-deep: #0A1E38;
-    --navy-soft: #1C3D68;
-    --gold: #C8A75D;
-    --gold-light: #E3CE9E;
-    --gold-deep: #A9843F;
-    --cream: #FAF7F1;
-    --ivory: #FFFFFF;
-    --ink: #1B2430;
-    --ink-soft: #56606E;
-    --stone: #E7E1D4;
-    --whatsapp: #1F8A57;
-    --radius-s: 6px;
-    --radius-m: 14px;
-    --radius-l: 26px;
-    --shadow-s: 0 2px 10px rgba(15,45,82,0.06);
-    --shadow-m: 0 12px 36px rgba(15,45,82,0.10);
-    --shadow-l: 0 24px 60px rgba(15,45,82,0.16);
-    --ease: cubic-bezier(.22,.61,.36,1);
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  body{
-    font-family:'Heebo', sans-serif;
-    color:var(--ink);
-    background:var(--ivory);
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
 
-  h1,h2,h3,h4{
-    font-family:'Frank Ruhl Libre', serif;
-    font-weight:600;
-    line-height:1.22;
-    color:var(--navy);
-  }
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
 
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  button{font-family:inherit; cursor:pointer;}
-  ul{list-style:none;}
+    body {
+      font-family: 'Heebo', sans-serif;
+      color: var(--ink);
+      background: var(--ivory);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
-  section{position:relative;}
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-weight: 600;
+      line-height: 1.22;
+      color: var(--navy);
+    }
 
-  .eyebrow{
-    font-family:'Heebo', sans-serif;
-    font-weight:700;
-    font-size:13px;
-    letter-spacing:0.01em;
-    color:var(--gold-deep);
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-  }
-  .eyebrow::before{
-    content:'';
-    width:26px; height:1.5px;
-    background:var(--gold-deep);
-    display:inline-block;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  :focus-visible{outline:2.5px solid var(--gold-deep); outline-offset:3px;}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:9px;
-    padding:15px 28px;
-    font-weight:700;
-    font-size:15.5px;
-    border-radius:999px;
-    border:1.5px solid transparent;
-    transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .3s, color .3s, border-color .3s;
-    white-space:nowrap;
-  }
-  .btn svg{flex-shrink:0;}
-  .btn-gold{ background:var(--gold); color:var(--navy-deep); box-shadow:var(--shadow-s);}
-  .btn-gold:hover{ transform:translateY(-2px); box-shadow:var(--shadow-m); background:var(--gold-light);}
-  .btn-outline-light{ border-color:rgba(255,255,255,0.45); color:#fff;}
-  .btn-outline-light:hover{ border-color:#fff; background:rgba(255,255,255,0.08); transform:translateY(-2px);}
-  .btn-whatsapp{ background:var(--whatsapp); color:#fff; box-shadow:var(--shadow-s);}
-  .btn-whatsapp:hover{ transform:translateY(-2px); box-shadow:var(--shadow-m); filter:brightness(1.07);}
-  .btn-navy{ background:var(--navy); color:#fff; box-shadow:var(--shadow-s);}
-  .btn-navy:hover{ transform:translateY(-2px); box-shadow:var(--shadow-m); background:var(--navy-soft);}
-  .btn-ghost-navy{ border-color:var(--stone); color:var(--navy);}
-  .btn-ghost-navy:hover{ border-color:var(--navy); background:var(--cream);}
-  .btn-sm{padding:11px 20px; font-size:14px;}
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
 
-  header{
-    position:sticky; top:0; z-index:200;
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--stone);
-  }
-  .header-inner{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 32px;
-    max-width:1200px; margin:0 auto;
-  }
-  .logo{
-    display:flex; align-items:center; gap:11px;
-    font-family:'Frank Ruhl Libre', serif; font-weight:600; font-size:19px;
-    color:var(--navy);
-  }
-  .logo .seal{width:38px; height:38px; flex-shrink:0;}
-  .logo .word small{
-    display:block; font-family:'Heebo',sans-serif; font-weight:600;
-    font-size:11px; color:var(--gold-deep); margin-top:2px;
-  }
-  nav.primary{display:flex; align-items:center; gap:34px;}
-  nav.primary a{
-    font-size:15px; font-weight:600; color:var(--ink-soft);
-    position:relative; padding:4px 0; transition:color .25s;
-  }
-  nav.primary a::after{
-    content:''; position:absolute; right:0; bottom:-3px; height:2px; width:0;
-    background:var(--gold-deep); transition:width .3s var(--ease);
-  }
-  nav.primary a:hover{color:var(--navy);}
-  nav.primary a:hover::after{width:100%;}
-  .header-actions{display:flex; align-items:center; gap:14px;}
-  .phone-chip{
-    display:flex; align-items:center; gap:8px;
-    font-weight:700; font-size:15px; color:var(--navy);
-  }
-  .phone-chip svg{color:var(--gold-deep);}
-  .menu-toggle{display:none; background:none; border:none; padding:6px;}
-  .menu-toggle span{display:block; width:24px; height:2px; background:var(--navy); margin:5px 0; transition:.3s;}
+    ul {
+      list-style: none;
+    }
 
-  .hero{
-    background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 62%, var(--navy-soft) 100%);
-    color:#fff;
-    padding:88px 0 110px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:'';
-    position:absolute; inset:0;
-    background-image:
-      radial-gradient(circle at 86% 18%, rgba(200,167,93,0.10), transparent 40%),
-      radial-gradient(circle at 10% 80%, rgba(200,167,93,0.08), transparent 45%);
-    pointer-events:none;
-  }
-  .hero-grid{
-    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
-    position:relative; z-index:2;
-  }
-  .hero-copy .eyebrow{color:var(--gold-light);}
-  .hero-copy .eyebrow::before{background:var(--gold-light);}
-  .hero h1{
-    color:#fff; font-size:clamp(36px, 4.4vw, 56px);
-    margin:22px 0 22px;
-  }
-  .hero h1 em{color:var(--gold-light); font-style:normal;}
-  .hero p.lede{
-    font-size:18px; color:rgba(255,255,255,0.78); max-width:480px; margin-bottom:36px;
-    font-weight:400;
-  }
-  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:44px;}
-  .hero-trust{display:flex; gap:30px; flex-wrap:wrap;}
-  .hero-trust .stat b{
-    display:block; font-family:'Frank Ruhl Libre',serif; font-size:26px; color:var(--gold-light); font-weight:600;
-  }
-  .hero-trust .stat span{font-size:13px; color:rgba(255,255,255,0.6);}
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
 
-  /* Hero emblem graphic */
-  .hero-art{ position:relative; display:flex; align-items:center; justify-content:center; }
-  .hero-art .frame{
-    position:relative; width:100%; max-width:420px; aspect-ratio:3/3.6;
-    border-radius:var(--radius-l);
-    background:linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
-    border:1px solid rgba(255,255,255,0.14);
-    display:flex; align-items:center; justify-content:center;
-    padding:34px;
-  }
-  .hero-art .card-float{
-    position:absolute; bottom:-22px; right:-26px;
-    background:#fff; color:var(--navy);
-    border-radius:var(--radius-m);
-    padding:16px 20px;
-    box-shadow:var(--shadow-l);
-    display:flex; align-items:center; gap:12px;
-    max-width:230px;
-  }
-  .hero-art .card-float .ico{
-    width:38px; height:38px; border-radius:50%;
-    background:var(--cream); display:flex; align-items:center; justify-content:center; flex-shrink:0;
-    color:var(--gold-deep);
-  }
-  .hero-art .card-float b{display:block; font-size:14px; font-family:'Frank Ruhl Libre',serif; font-weight:600;}
-  .hero-art .card-float span{font-size:12px; color:var(--ink-soft);}
+    section {
+      position: relative;
+    }
 
-  .section{padding:104px 0;}
-  .section.tight{padding:84px 0;}
-  .section-head{max-width:640px; margin-bottom:56px;}
-  .section-head h2{font-size:clamp(28px,3.2vw,40px); margin-top:16px;}
-  .section-head p{color:var(--ink-soft); font-size:16.5px; margin-top:16px; max-width:520px;}
-  .bg-cream{background:var(--cream);}
+    .eyebrow {
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.01em;
+      color: var(--gold-deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-  /* reveal animation */
-  .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
-  .reveal.in{opacity:1; transform:translateY(0);}
+    .eyebrow::before {
+      content: '';
+      width: 26px;
+      height: 1.5px;
+      background: var(--gold-deep);
+      display: inline-block;
+    }
 
-  .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
-  .why-card{
-    background:#fff; border:1px solid var(--stone); border-radius:var(--radius-m);
-    padding:32px 26px; transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
-  }
-  .why-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-m); border-color:transparent;}
-  .why-card .ico{
-    width:48px; height:48px; border-radius:12px;
-    background:var(--navy); color:var(--gold-light);
-    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
-  }
-  .why-card h3{font-size:19px; margin-bottom:9px;}
-  .why-card p{font-size:14.5px; color:var(--ink-soft);}
+    :focus-visible {
+      outline: 2.5px solid var(--gold-deep);
+      outline-offset: 3px;
+    }
 
-  .practice-grid{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;
-  }
-  .practice-card{
-    position:relative; border-radius:var(--radius-m); overflow:hidden;
-    padding:30px 26px; min-height:220px;
-    background:var(--navy);
-    color:#fff;
-    display:flex; flex-direction:column; justify-content:flex-end;
-    transition:transform .4s var(--ease), box-shadow .4s var(--ease);
-    border:1px solid var(--navy);
-    width:100%; font-family:inherit; text-align:right; cursor:pointer; margin:0;
-    -webkit-appearance:none; appearance:none;
-  }
-  .practice-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-l);}
-  .practice-card:focus-visible{outline:2.5px solid var(--gold); outline-offset:3px;}
-  .practice-card.featured{
-    grid-column:span 2; grid-row:span 2; min-height:466px;
-    background:linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
-  }
-  .practice-card::before{
-    content:''; position:absolute; inset:0;
-    background:radial-gradient(circle at 15% 8%, rgba(200,167,93,0.22), transparent 55%);
-  }
-  .practice-card .card-art{
-    position:absolute; top:0; left:0; right:0; z-index:1;
-    display:flex; justify-content:center; padding-top:36px;
-    opacity:0.5; pointer-events:none;
-  }
-  .practice-card .card-art svg{width:62%; max-width:230px; height:auto;}
-  .practice-card .p-ico{
-    position:relative; z-index:2;
-    width:44px; height:44px; border-radius:10px;
-    background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18);
-    display:flex; align-items:center; justify-content:center; color:var(--gold-light);
-    margin-bottom:18px;
-  }
-  .practice-card.featured .p-ico{width:54px; height:54px;}
-  .practice-card h3{position:relative; z-index:2; color:#fff; font-size:19.5px; margin-bottom:8px;}
-  .practice-card.featured h3{font-size:28px;}
-  .practice-card p{position:relative; z-index:2; font-size:13.5px; color:rgba(255,255,255,0.68); margin-bottom:16px;}
-  .practice-card .link{
-    position:relative; z-index:2; font-size:13.5px; font-weight:700; color:var(--gold-light);
-    display:inline-flex; align-items:center; gap:6px;
-  }
-  .practice-card:not(.featured){background:#fff; color:var(--navy); border-color:var(--stone);}
-  .practice-card:not(.featured)::before{display:none;}
-  .practice-card:not(.featured) h3{color:var(--navy);}
-  .practice-card:not(.featured) p{color:var(--ink-soft);}
-  .practice-card:not(.featured) .p-ico{background:var(--cream); border-color:var(--stone); color:var(--gold-deep);}
-  .practice-card:not(.featured) .link{color:var(--gold-deep);}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 15px 28px;
+      font-weight: 700;
+      font-size: 15.5px;
+      border-radius: 999px;
+      border: 1.5px solid transparent;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .3s, color .3s, border-color .3s;
+      white-space: nowrap;
+    }
 
-  .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
-  .about-portrait{
-    position:relative; border-radius:var(--radius-l);
-    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 100%);
-    aspect-ratio:4/4.9;
-    display:flex; align-items:center; justify-content:center;
-    overflow:hidden;
-  }
-  .about-portrait svg{width:58%; opacity:0.9;}
-  .about-portrait img{width:100%; height:100%; object-fit:cover; object-position:top center;}
-  .about-portrait .ring{
-    position:absolute; inset:18px; border:1px solid rgba(255,255,255,0.14); border-radius:20px;
-  }
-  .about-badge{
-    position:absolute; top:20px; left:20px; background:var(--gold);
-    color:var(--navy-deep); font-family:'Frank Ruhl Libre',serif; font-weight:600;
-    border-radius:50%; width:76px; height:76px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    text-align:center; line-height:1.05; box-shadow:var(--shadow-m);
-  }
-  .about-badge span{font-size:22px;}
-  .about-badge small{font-size:9px; font-family:'Heebo',sans-serif; font-weight:700;}
-  .about-copy h2{font-size:clamp(27px,3vw,36px); margin:16px 0 20px;}
-  .about-copy p{color:var(--ink-soft); font-size:16px; margin-bottom:16px; max-width:560px;}
-  .values-row{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:30px 0 32px;}
-  .value-item{border-right:2px solid var(--gold); padding-right:14px;}
-  .value-item b{display:block; font-family:'Frank Ruhl Libre',serif; font-size:16px; color:var(--navy); margin-bottom:3px;}
-  .value-item span{font-size:13px; color:var(--ink-soft);}
+    .btn svg {
+      flex-shrink: 0;
+    }
 
-  .cta-banner{
-    background:linear-gradient(120deg, var(--navy-deep), var(--navy) 60%, var(--navy-soft));
-    color:#fff; border-radius:var(--radius-l); padding:64px 60px;
-    display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
-    position:relative; overflow:hidden;
-  }
-  .cta-banner::after{
-    content:''; position:absolute; left:-60px; top:-60px; width:280px; height:280px; border-radius:50%;
-    background:radial-gradient(circle, rgba(200,167,93,0.18), transparent 70%);
-  }
-  .cta-banner .txt{position:relative; z-index:2; max-width:480px;}
-  .cta-banner h2{color:#fff; font-size:clamp(23px,2.4vw,30px); margin-bottom:10px;}
-  .cta-banner p{color:rgba(255,255,255,0.72); font-size:15.5px;}
-  .cta-banner .ctas{position:relative; z-index:2; display:flex; gap:14px; flex-wrap:wrap;}
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy-deep);
+      box-shadow: var(--shadow-s);
+    }
 
-  .testi-track{
-    display:flex; gap:22px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:10px;
-    -ms-overflow-style:none; scrollbar-width:none;
-  }
-  .testi-track::-webkit-scrollbar{display:none;}
-  .testi-card{
-    scroll-snap-align:start; flex:0 0 380px;
-    background:#fff; border:1px solid var(--stone); border-radius:var(--radius-m);
-    padding:32px; display:flex; flex-direction:column; gap:16px;
-  }
-  .testi-stars{color:var(--gold-deep); display:flex; gap:3px;}
-  .testi-card p.quote{font-size:15.5px; color:var(--ink); line-height:1.75;}
-  .testi-who{display:flex; align-items:center; gap:12px; margin-top:auto;}
-  .testi-who .av{
-    width:40px; height:40px; border-radius:50%; background:var(--navy); color:var(--gold-light);
-    display:flex; align-items:center; justify-content:center; font-family:'Frank Ruhl Libre',serif; font-weight:600; font-size:15px;
-  }
-  .testi-who b{display:block; font-size:14.5px;}
-  .testi-who span{font-size:12.5px; color:var(--ink-soft);}
-  .testi-nav{display:flex; gap:10px; margin-top:24px;}
-  .testi-nav button{
-    width:40px; height:40px; border-radius:50%; border:1px solid var(--stone); background:#fff;
-    display:flex; align-items:center; justify-content:center; color:var(--navy); transition:.25s;
-  }
-  .testi-nav button:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-m);
+      background: var(--gold-light);
+    }
 
-  .faq-list{max-width:780px;}
-  .faq-item{border-bottom:1px solid var(--stone);}
-  .faq-q{
-    width:100%; text-align:right; background:none; border:none; padding:24px 4px;
-    display:flex; align-items:center; justify-content:space-between; gap:20px;
-  }
-  .faq-q span.qtext{font-family:'Frank Ruhl Libre',serif; font-size:18.5px; color:var(--navy); font-weight:600;}
-  .faq-q .plus{
-    width:28px; height:28px; border-radius:50%; border:1px solid var(--stone); flex-shrink:0;
-    display:flex; align-items:center; justify-content:center; position:relative; transition:.35s var(--ease);
-  }
-  .faq-q .plus::before, .faq-q .plus::after{
-    content:''; position:absolute; background:var(--navy); transition:.35s var(--ease);
-  }
-  .faq-q .plus::before{width:10px; height:1.5px;}
-  .faq-q .plus::after{width:1.5px; height:10px;}
-  .faq-item.open .plus{transform:rotate(45deg); background:var(--navy);}
-  .faq-item.open .plus::before, .faq-item.open .plus::after{background:#fff;}
-  .faq-a{max-height:0; overflow:hidden; transition:max-height .4s var(--ease);}
-  .faq-a p{padding:0 4px 24px; color:var(--ink-soft); font-size:15.5px; max-width:640px;}
+    .btn-outline-light {
+      border-color: rgba(255, 255, 255, 0.45);
+      color: #fff;
+    }
 
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:0; border-radius:var(--radius-l); overflow:hidden; box-shadow:var(--shadow-m);}
-  .contact-info{background:var(--navy); color:#fff; padding:56px 48px;}
-  .contact-info h3{color:#fff; font-size:25px; margin-bottom:14px;}
-  .contact-info > p{color:rgba(255,255,255,0.68); font-size:15px; margin-bottom:36px; max-width:380px;}
-  .contact-row{display:flex; gap:16px; margin-bottom:24px; align-items:flex-start;}
-  .contact-row .ico{
-    width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14);
-    display:flex; align-items:center; justify-content:center; color:var(--gold-light); flex-shrink:0;
-  }
-  .contact-row b{display:block; font-size:15px; margin-bottom:2px;}
-  .contact-row span, .contact-row a{font-size:14.5px; color:rgba(255,255,255,0.68);}
-  .contact-form{background:#fff; padding:56px 48px;}
-  .contact-form h3{font-size:22px; margin-bottom:22px;}
-  .field{margin-bottom:16px;}
-  .field label{display:block; font-size:13px; font-weight:700; color:var(--ink-soft); margin-bottom:7px;}
-  .field input, .field select, .field textarea{
-    width:100%; padding:13px 15px; border:1.5px solid var(--stone); border-radius:var(--radius-s);
-    font-family:'Heebo',sans-serif; font-size:15px; color:var(--ink); transition:.25s;
-    background:var(--cream);
-  }
-  .field input:focus, .field select:focus, .field textarea:focus{
-    outline:none; border-color:var(--gold-deep); background:#fff;
-  }
-  .field textarea{resize:vertical; min-height:90px;}
-  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+    .btn-outline-light:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
 
-  footer{background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:70px 0 28px;}
-  .footer-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; margin-bottom:52px;}
-  .footer-logo{display:flex; align-items:center; gap:10px; color:#fff; font-family:'Frank Ruhl Libre',serif; font-size:18.5px; font-weight:600; margin-bottom:16px;}
-  .footer-col h4{color:#fff; font-family:'Heebo',sans-serif; font-size:14px; margin-bottom:18px; font-weight:700;}
-  .footer-col ul li{margin-bottom:11px; font-size:14.5px;}
-  .footer-col a:hover{color:var(--gold-light);}
-  .footer-bottom{
-    border-top:1px solid rgba(255,255,255,0.12); padding-top:26px;
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:13.5px;
-  }
-  .footer-bottom .links{display:flex; gap:22px; flex-wrap:wrap;}
-  .footer-bottom a:hover{color:var(--gold-light);}
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+      box-shadow: var(--shadow-s);
+    }
 
-  .sticky-cta{
-    position:fixed; bottom:0; left:0; right:0; z-index:300;
-    display:none; gap:1px; background:var(--stone);
-  }
-  .sticky-cta a{
-    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
-    padding:15px 10px; font-weight:700; font-size:14.5px;
-  }
-  .sticky-cta .sc-call{background:var(--navy); color:#fff;}
-  .sticky-cta .sc-wa{background:var(--whatsapp); color:#fff;}
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-m);
+      filter: brightness(1.07);
+    }
 
-  .fab-wa{
-    position:fixed; bottom:28px; left:28px; z-index:250;
-    width:58px; height:58px; border-radius:50%; background:var(--whatsapp); color:#fff;
-    display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-l);
-    transition:transform .3s var(--ease);
-  }
-  .fab-wa:hover{transform:scale(1.08);}
+    .btn-navy {
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow-s);
+    }
 
-  /* ============ SERVICE DETAIL MODAL ============ */
-  .modal-overlay{
-    position:fixed; inset:0; z-index:600;
-    background:rgba(10,30,56,0.6); backdrop-filter:blur(4px);
-    display:flex; align-items:center; justify-content:center; padding:24px;
-    opacity:0; visibility:hidden; transition:opacity .3s var(--ease), visibility 0s linear .3s;
-  }
-  .modal-overlay.open{ opacity:1; visibility:visible; transition:opacity .3s var(--ease); }
-  .modal-panel{
-    background:#fff; border-radius:var(--radius-l); width:100%; max-width:660px;
-    max-height:86vh; overflow-y:auto; position:relative;
-    padding:48px 44px 40px; box-shadow:var(--shadow-l);
-    transform:translateY(24px) scale(0.98); transition:transform .35s var(--ease);
-  }
-  .modal-overlay.open .modal-panel{ transform:translateY(0) scale(1); }
-  .modal-close{
-    position:absolute; top:20px; left:20px; width:38px; height:38px; border-radius:50%;
-    border:1px solid var(--stone); background:var(--cream); color:var(--navy);
-    display:flex; align-items:center; justify-content:center; font-size:16px; transition:.25s;
-  }
-  .modal-close:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
-  .modal-icon{
-    width:52px; height:52px; border-radius:12px; background:var(--navy); color:var(--gold-light);
-    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
-  }
-  .modal-panel .eyebrow{margin-bottom:10px;}
-  .modal-panel h3{font-size:clamp(24px,2.6vw,30px); margin-bottom:20px;}
-  .modal-body p{color:var(--ink-soft); font-size:15.5px; margin-bottom:16px;}
-  .modal-body h4{
-    font-family:'Heebo',sans-serif; font-weight:700; font-size:14.5px; color:var(--navy);
-    margin:22px 0 12px;
-  }
-  .modal-body ul{margin-bottom:16px;}
-  .modal-body ul li{
-    position:relative; padding-right:22px; margin-bottom:10px; font-size:15px; color:var(--ink-soft);
-  }
-  .modal-body ul li::before{
-    content:''; position:absolute; right:0; top:8px; width:7px; height:7px; border-radius:50%;
-    background:var(--gold-deep);
-  }
-  .modal-cta{
-    display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; padding-top:26px;
-    border-top:1px solid var(--stone);
-  }
-  @media (max-width:640px){
-    .modal-panel{padding:60px 24px 30px; max-height:90vh;}
-    .modal-cta{flex-direction:column;}
-    .modal-cta .btn{width:100%;}
-  }
+    .btn-navy:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-m);
+      background: var(--navy-soft);
+    }
 
-  @media (max-width: 980px){
-    nav.primary{display:none;}
-    .menu-toggle{display:block;}
-    .header-actions .phone-chip{display:none;}
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-art{order:-1; margin-bottom:20px;}
-    .hero-art .frame{max-width:280px;}
-    .why-grid{grid-template-columns:repeat(2,1fr);}
-    .practice-grid{grid-template-columns:repeat(2,1fr);}
-    .practice-card.featured{grid-column:span 2; grid-row:span 1; min-height:260px;}
-    .about-grid{grid-template-columns:1fr; gap:40px;}
-    .about-portrait{max-width:340px; margin:0 auto;}
-    .values-row{grid-template-columns:1fr 1fr;}
-    .contact-grid{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr 1fr; gap:32px;}
-    .sticky-cta{display:flex;}
-    .fab-wa{bottom:80px;}
-  }
-  @media (max-width: 640px){
-    .wrap{padding:0 20px;}
-    .section{padding:72px 0;}
-    .why-grid{grid-template-columns:1fr;}
-    .practice-grid{grid-template-columns:1fr;}
-    .practice-card.featured{grid-column:span 1;}
-    .values-row{grid-template-columns:1fr;}
-    .cta-banner{padding:44px 28px;}
-    .contact-info, .contact-form{padding:40px 26px;}
-    .form-row{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr;}
-    .hero{padding:56px 0 90px;}
-  }
-</style>
+    .btn-ghost-navy {
+      border-color: var(--stone);
+      color: var(--navy);
+    }
+
+    .btn-ghost-navy:hover {
+      border-color: var(--navy);
+      background: var(--cream);
+    }
+
+    .btn-sm {
+      padding: 11px 20px;
+      font-size: 14px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-weight: 600;
+      font-size: 19px;
+      color: var(--navy);
+    }
+
+    .logo .seal {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .logo .word small {
+      display: block;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--gold-deep);
+      margin-top: 2px;
+    }
+
+    nav.primary {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    nav.primary a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      position: relative;
+      padding: 4px 0;
+      transition: color .25s;
+    }
+
+    nav.primary a::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      height: 2px;
+      width: 0;
+      background: var(--gold-deep);
+      transition: width .3s var(--ease);
+    }
+
+    nav.primary a:hover {
+      color: var(--navy);
+    }
+
+    nav.primary a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .phone-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--navy);
+    }
+
+    .phone-chip svg {
+      color: var(--gold-deep);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      margin: 5px 0;
+      transition: .3s;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 62%, var(--navy-soft) 100%);
+      color: #fff;
+      padding: 88px 0 110px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 86% 18%, rgba(200, 167, 93, 0.10), transparent 40%),
+        radial-gradient(circle at 10% 80%, rgba(200, 167, 93, 0.08), transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-copy .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .hero-copy .eyebrow::before {
+      background: var(--gold-light);
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(36px, 4.4vw, 56px);
+      margin: 22px 0 22px;
+    }
+
+    .hero h1 em {
+      color: var(--gold-light);
+      font-style: normal;
+    }
+
+    .hero p.lede {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 480px;
+      margin-bottom: 36px;
+      font-weight: 400;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-trust .stat b {
+      display: block;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 26px;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .hero-trust .stat span {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Hero emblem graphic */
+    .hero-art {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-art .frame {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 3/3.6;
+      border-radius: var(--radius-l);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 34px;
+    }
+
+    .hero-art .card-float {
+      position: absolute;
+      bottom: -22px;
+      right: -26px;
+      background: #fff;
+      color: var(--navy);
+      border-radius: var(--radius-m);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-l);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 230px;
+    }
+
+    .hero-art .card-float .ico {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold-deep);
+    }
+
+    .hero-art .card-float b {
+      display: block;
+      font-size: 14px;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-weight: 600;
+    }
+
+    .hero-art .card-float span {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .section {
+      padding: 104px 0;
+    }
+
+    .section.tight {
+      padding: 84px 0;
+    }
+
+    .section-head {
+      max-width: 640px;
+      margin-bottom: 56px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 3.2vw, 40px);
+      margin-top: 16px;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      font-size: 16.5px;
+      margin-top: 16px;
+      max-width: 520px;
+    }
+
+    .bg-cream {
+      background: var(--cream);
+    }
+
+    /* reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .why-card {
+      background: #fff;
+      border: 1px solid var(--stone);
+      border-radius: var(--radius-m);
+      padding: 32px 26px;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-m);
+      border-color: transparent;
+    }
+
+    .why-card .ico {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .why-card p {
+      font-size: 14.5px;
+      color: var(--ink-soft);
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .practice-card {
+      position: relative;
+      border-radius: var(--radius-m);
+      overflow: hidden;
+      padding: 30px 26px;
+      min-height: 220px;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+      border: 1px solid var(--navy);
+      width: 100%;
+      font-family: inherit;
+      text-align: right;
+      cursor: pointer;
+      margin: 0;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .practice-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-l);
+    }
+
+    .practice-card:focus-visible {
+      outline: 2.5px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .practice-card.featured {
+      grid-column: span 2;
+      grid-row: span 2;
+      min-height: 466px;
+      background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
+    }
+
+    .practice-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 15% 8%, rgba(200, 167, 93, 0.22), transparent 55%);
+    }
+
+    .practice-card .card-art {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      padding-top: 36px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .practice-card .card-art svg {
+      width: 62%;
+      max-width: 230px;
+      height: auto;
+    }
+
+    .practice-card .p-ico {
+      position: relative;
+      z-index: 2;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+    }
+
+    .practice-card.featured .p-ico {
+      width: 54px;
+      height: 54px;
+    }
+
+    .practice-card h3 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      font-size: 19.5px;
+      margin-bottom: 8px;
+    }
+
+    .practice-card.featured h3 {
+      font-size: 28px;
+    }
+
+    .practice-card p {
+      position: relative;
+      z-index: 2;
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.68);
+      margin-bottom: 16px;
+    }
+
+    .practice-card .link {
+      position: relative;
+      z-index: 2;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--gold-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .practice-card:not(.featured) {
+      background: #fff;
+      color: var(--navy);
+      border-color: var(--stone);
+    }
+
+    .practice-card:not(.featured)::before {
+      display: none;
+    }
+
+    .practice-card:not(.featured) h3 {
+      color: var(--navy);
+    }
+
+    .practice-card:not(.featured) p {
+      color: var(--ink-soft);
+    }
+
+    .practice-card:not(.featured) .p-ico {
+      background: var(--cream);
+      border-color: var(--stone);
+      color: var(--gold-deep);
+    }
+
+    .practice-card:not(.featured) .link {
+      color: var(--gold-deep);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-portrait {
+      position: relative;
+      border-radius: var(--radius-l);
+      background: linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 100%);
+      aspect-ratio: 4/4.9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .about-portrait svg {
+      width: 58%;
+      opacity: 0.9;
+    }
+
+    .about-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .about-portrait .ring {
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px;
+    }
+
+    .about-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-family: 'Frank Ruhl Libre', serif;
+      font-weight: 600;
+      border-radius: 50%;
+      width: 76px;
+      height: 76px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.05;
+      box-shadow: var(--shadow-m);
+    }
+
+    .about-badge span {
+      font-size: 22px;
+    }
+
+    .about-badge small {
+      font-size: 9px;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(27px, 3vw, 36px);
+      margin: 16px 0 20px;
+    }
+
+    .about-copy p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      margin-bottom: 16px;
+      max-width: 560px;
+    }
+
+    .values-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 30px 0 32px;
+    }
+
+    .value-item {
+      border-right: 2px solid var(--gold);
+      padding-right: 14px;
+    }
+
+    .value-item b {
+      display: block;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 16px;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .value-item span {
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    .cta-banner {
+      background: linear-gradient(120deg, var(--navy-deep), var(--navy) 60%, var(--navy-soft));
+      color: #fff;
+      border-radius: var(--radius-l);
+      padding: 64px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      left: -60px;
+      top: -60px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 167, 93, 0.18), transparent 70%);
+    }
+
+    .cta-banner .txt {
+      position: relative;
+      z-index: 2;
+      max-width: 480px;
+    }
+
+    .cta-banner h2 {
+      color: #fff;
+      font-size: clamp(23px, 2.4vw, 30px);
+      margin-bottom: 10px;
+    }
+
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 15.5px;
+    }
+
+    .cta-banner .ctas {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .testi-track {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .testi-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testi-card {
+      scroll-snap-align: start;
+      flex: 0 0 380px;
+      background: #fff;
+      border: 1px solid var(--stone);
+      border-radius: var(--radius-m);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .testi-stars {
+      color: var(--gold-deep);
+      display: flex;
+      gap: 3px;
+    }
+
+    .testi-card p.quote {
+      font-size: 15.5px;
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    .testi-who {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .testi-who .av {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .testi-who b {
+      display: block;
+      font-size: 14.5px;
+    }
+
+    .testi-who span {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+    }
+
+    .testi-nav {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .testi-nav button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--stone);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      transition: .25s;
+    }
+
+    .testi-nav button:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .faq-list {
+      max-width: 780px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: right;
+      background: none;
+      border: none;
+      padding: 24px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .faq-q span.qtext {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 18.5px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .faq-q .plus {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--stone);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: .35s var(--ease);
+    }
+
+    .faq-q .plus::before,
+    .faq-q .plus::after {
+      content: '';
+      position: absolute;
+      background: var(--navy);
+      transition: .35s var(--ease);
+    }
+
+    .faq-q .plus::before {
+      width: 10px;
+      height: 1.5px;
+    }
+
+    .faq-q .plus::after {
+      width: 1.5px;
+      height: 10px;
+    }
+
+    .faq-item.open .plus {
+      transform: rotate(45deg);
+      background: var(--navy);
+    }
+
+    .faq-item.open .plus::before,
+    .faq-item.open .plus::after {
+      background: #fff;
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s var(--ease);
+    }
+
+    .faq-a p {
+      padding: 0 4px 24px;
+      color: var(--ink-soft);
+      font-size: 15.5px;
+      max-width: 640px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: var(--radius-l);
+      overflow: hidden;
+      box-shadow: var(--shadow-m);
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: #fff;
+      padding: 56px 48px;
+    }
+
+    .contact-info h3 {
+      color: #fff;
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .contact-info>p {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 15px;
+      margin-bottom: 36px;
+      max-width: 380px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    .contact-row .ico {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+
+    .contact-row b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .contact-row span,
+    .contact-row a {
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 56px 48px;
+    }
+
+    .contact-form h3 {
+      font-size: 22px;
+      margin-bottom: 22px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      margin-bottom: 7px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1.5px solid var(--stone);
+      border-radius: var(--radius-s);
+      font-family: 'Heebo', sans-serif;
+      font-size: 15px;
+      color: var(--ink);
+      transition: .25s;
+      background: var(--cream);
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--gold-deep);
+      background: #fff;
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    footer {
+      background: var(--navy-deep);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 70px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 52px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 18.5px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-family: 'Heebo', sans-serif;
+      font-size: 14px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 11px;
+      font-size: 14.5px;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 13.5px;
+    }
+
+    .footer-bottom .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gold-light);
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 300;
+      display: none;
+      gap: 1px;
+      background: var(--stone);
+    }
+
+    .sticky-cta a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 10px;
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+
+    .sticky-cta .sc-call {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .sticky-cta .sc-wa {
+      background: var(--whatsapp);
+      color: #fff;
+    }
+
+    .fab-wa {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      z-index: 250;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-l);
+      transition: transform .3s var(--ease);
+    }
+
+    .fab-wa:hover {
+      transform: scale(1.08);
+    }
+
+    /* ============ SERVICE DETAIL MODAL ============ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 600;
+      background: rgba(10, 30, 56, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s var(--ease), visibility 0s linear .3s;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .3s var(--ease);
+    }
+
+    .modal-panel {
+      background: #fff;
+      border-radius: var(--radius-l);
+      width: 100%;
+      max-width: 660px;
+      max-height: 86vh;
+      overflow-y: auto;
+      position: relative;
+      padding: 48px 44px 40px;
+      box-shadow: var(--shadow-l);
+      transform: translateY(24px) scale(0.98);
+      transition: transform .35s var(--ease);
+    }
+
+    .modal-overlay.open .modal-panel {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--stone);
+      background: var(--cream);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: .25s;
+    }
+
+    .modal-close:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .modal-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .modal-panel .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .modal-panel h3 {
+      font-size: clamp(24px, 2.6vw, 30px);
+      margin-bottom: 20px;
+    }
+
+    .modal-body p {
+      color: var(--ink-soft);
+      font-size: 15.5px;
+      margin-bottom: 16px;
+    }
+
+    .modal-body h4 {
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--navy);
+      margin: 22px 0 12px;
+    }
+
+    .modal-body ul {
+      margin-bottom: 16px;
+    }
+
+    .modal-body ul li {
+      position: relative;
+      padding-right: 22px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: var(--ink-soft);
+    }
+
+    .modal-body ul li::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-deep);
+    }
+
+    .modal-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      padding-top: 26px;
+      border-top: 1px solid var(--stone);
+    }
+
+    @media (max-width:640px) {
+      .modal-panel {
+        padding: 60px 24px 30px;
+        max-height: 90vh;
+      }
+
+      .modal-cta {
+        flex-direction: column;
+      }
+
+      .modal-cta .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 980px) {
+      nav.primary {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .header-actions .phone-chip {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        order: -1;
+        margin-bottom: 20px;
+      }
+
+      .hero-art .frame {
+        max-width: 280px;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .practice-card.featured {
+        grid-column: span 2;
+        grid-row: span 1;
+        min-height: 260px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-portrait {
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      .values-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .sticky-cta {
+        display: flex;
+      }
+
+      .fab-wa {
+        bottom: 80px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 0 20px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .practice-card.featured {
+        grid-column: span 1;
+      }
+
+      .values-row {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-banner {
+        padding: 44px 28px;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 40px 26px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 56px 0 90px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="header-inner">
-    <a href="#" class="logo">
-      <svg class="seal" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="22" cy="22" r="21" stroke="#C8A75D" stroke-width="1.4"/>
-        <circle cx="22" cy="22" r="16.5" stroke="#0F2D52" stroke-width="1"/>
-        <path d="M14 26L22 12L30 26" stroke="#0F2D52" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M16.5 26H27.5" stroke="#C8A75D" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M22 12V26" stroke="#C8A75D" stroke-width="1.2"/>
-      </svg>
-      <span class="word">משרד עורכי דין<small>כפר קרע · מקרקעין ודין אזרחי</small></span>
-    </a>
-    <nav class="primary">
-      <a href="#who">למי אנחנו כאן</a>
-      <a href="#practice">תחומי עיסוק</a>
-      <a href="#about">אודות</a>
-      <a href="#faq">שאלות נפוצות</a>
-      <a href="#contact">צור קשר</a>
-    </nav>
-    <div class="header-actions">
-      <a href="tel:+972505200261" class="phone-chip">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        050-520-0261
-      </a>
-      <a href="#contact" class="btn btn-gold btn-sm">קביעת פגישת ייעוץ</a>
-      <button class="menu-toggle" aria-label="תפריט"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">עורך דין מקרקעין · ליווי עסקאות נדל״ן וקרקעות בכל הארץ</span>
-      <h1>מגנים על הזכויות שלך<br><em>לפני שהעסקה מתחילה.</em></h1>
-      <p class="lede">ליווי משפטי מלא בעסקאות נדל״ן וקרקעות, מבדיקת הזכויות ועד לרישום הסופי. שבע שנות ניסיון ושירות אישי, בפריסה ארצית.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-gold">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
-          קביעת פגישת ייעוץ
-        </a>
-        <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6zM12.06 18.4a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.66.67-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.08zm3.6-4.94c-.2-.1-1.16-.57-1.34-.64-.18-.07-.31-.1-.44.1-.13.2-.5.63-.62.77-.11.13-.23.15-.42.05a5.4 5.4 0 0 1-1.6-.99 5.98 5.98 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.24.3-.36.1-.12.13-.2.2-.34.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.38 2.1 3.35 2.94.47.2.83.32 1.12.42.47.15.9.13 1.24.08.38-.06 1.16-.47 1.32-.93.16-.45.16-.84.11-.92-.05-.08-.18-.13-.38-.23z"/></svg>
-          וואטסאפ
-        </a>
-        <a href="tel:+972505200261" class="btn btn-outline-light">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          התקשרו עכשיו
-        </a>
-      </div>
-      <div class="hero-trust">
-        <div class="stat"><b>7</b><span>שנות ניסיון</span></div>
-        <div class="stat"><b>בכל הארץ</b><span>שירות בכל רחבי ישראל</span></div>
-        <div class="stat"><b>6</b><span>תחומי עיסוק</span></div>
-      </div>
-    </div>
-    <div class="hero-art">
-      <div class="frame">
-        <svg viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="90" width="160" height="150" rx="2" stroke="#C8A75D" stroke-width="1.3" opacity="0.85"/>
-          <rect x="50" y="120" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6"/>
-          <rect x="96" y="120" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6"/>
-          <rect x="142" y="120" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6"/>
-          <rect x="50" y="170" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6"/>
-          <rect x="96" y="170" width="28" height="60" stroke="#E3CE9E" stroke-width="1.3" opacity="0.9"/>
-          <rect x="142" y="170" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6"/>
-          <path d="M20 90L110 30L200 90" stroke="#E3CE9E" stroke-width="1.6"/>
-          <circle cx="110" cy="30" r="3.5" fill="#C8A75D"/>
-          <circle cx="110" cy="146" r="46" stroke="#C8A75D" stroke-width="0.7" opacity="0.35"/>
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <svg class="seal" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="21" stroke="#C8A75D" stroke-width="1.4" />
+          <circle cx="22" cy="22" r="16.5" stroke="#0F2D52" stroke-width="1" />
+          <path d="M14 26L22 12L30 26" stroke="#0F2D52" stroke-width="1.6" stroke-linejoin="round" />
+          <path d="M16.5 26H27.5" stroke="#C8A75D" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M22 12V26" stroke="#C8A75D" stroke-width="1.2" />
         </svg>
-        <div class="card-float">
-          <div class="ico">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          </div>
-          <div><b>ייצוג מהימן</b><span>מקרקעין עד לחתימה</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-cream" id="who">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">למי אנחנו כאן</span>
-      <h2>עסקת נדל״ן בטוחה מתחילה בבדיקה משפטית נכונה</h2>
-      <p>בין אם מדובר בקרקע משפחתית או בעסקת מכירה, לפני כל חתימה כדאי לבדוק את הזכויות והאפשרויות המשפטיות.</p>
-    </div>
-    <div class="why-grid" style="grid-template-columns:repeat(2,1fr);">
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z"/><path d="M9 3v15M15 6v15"/></svg></div>
-        <h3>יש לכם קרקע משפחתית?</h3>
-        <p>לא תמיד ברור מי הבעלים החוקיים, כמה שותפים רשומים על הקרקע, ואילו זכויות עומדות לרשותכם. לפני כל מכירה, חלוקה או רישום נבדוק את הזכויות והאפשרויות המשפטיות לעומק.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
-        <h3>עומדים לפני עסקת נדל״ן?</h3>
-        <p>חוזה לא ברור, חריגות בנייה, חובות ועיקולים או בעיית טאבו יכולים לסכן כל עסקה. נבדוק את כל הפרטים ונלווה אתכם מהחוזה ועד למפתח.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">למה לבחור בנו</span>
-      <h2>ליווי משפטי שאפשר לסמוך עליו, מהשיחה הראשונה ועד החתימה הסופית</h2>
-      <p>כל תיק זוכה לתשומת לב אישית וישירה, לא לצוות מתחלף. זה מה ששבע שנות עשייה בונות.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg></div>
-        <h3>זמינות גבוהה</h3>
-        <p>ליווי אישי וזמינות גבוהה. אתם יודעים בכל שלב בדיוק איפה התיק עומד.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h3>7 שנות ניסיון</h3>
-        <p>עיסוק ממוקד בדיני מקרקעין ואזרחי, עם היכרות מעמיקה עם השוק המקומי.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>פריסה ארצית</h3>
-        <p>ייצוג לקוחות בכל רחבי הארץ, עם ניסיון עומק במגזר הערבי.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <h3>מענה מהיר</h3>
-        <p>שאלות ועדכוני תיק נענים במהירות, בטלפון, בוואטסאפ או במייל.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-        <h3>ליווי משפטי מלא</h3>
-        <p>תמיכה מקצה לקצה, מבדיקת חוזים ובדיקת נאותות ועד רישום.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>ייצוג מהימן</h3>
-        <p>טיפול קפדני ויסודי בתיק ששומר על האינטרסים שלכם בכל שלב.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-cream" id="practice">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">תחומי עיסוק</span>
-      <h2>ליווי משפטי ממוקד בדיני מקרקעין ואזרחי</h2>
-      <p>עסקאות מקרקעין הן ליבת העשייה שלנו, לצד מגוון שירותים אזרחיים לרגעים החשובים ביותר.</p>
-    </div>
-    <div class="practice-grid">
-      <button type="button" class="practice-card featured reveal" data-service="realestate">
-        <div class="card-art">
-          <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="60" width="160" height="110" rx="2" stroke="#E3CE9E" stroke-width="1.3" opacity="0.85"/>
-            <rect x="50" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6"/>
-            <rect x="96" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6"/>
-            <rect x="142" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6"/>
-            <rect x="96" y="140" width="28" height="30" stroke="#C8A75D" stroke-width="1.3" opacity="0.9"/>
-            <path d="M20 60L110 5L200 60" stroke="#C8A75D" stroke-width="1.6"/>
-            <circle cx="110" cy="5" r="3.2" fill="#C8A75D"/>
-          </svg>
-        </div>
-        <div class="p-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3-3.5 3.5zm0 0L19 4"/></svg></div>
-        <h3>מקרקעין, תכנון ובנייה</h3>
-        <p>קנייה ומכירה של דירות וקרקעות, בדיקות זכויות וטאבו, היתרי בנייה וחריגות בנייה, הסכמי שיתוף ופירוק שיתוף, ירושה ורישום זכויות, מהצעה ראשונה ועד רישום סופי.</p>
-        <span class="link">לפרטים המלאים על מקרקעין ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="execution">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h3>הוצאה לפועל</h3>
-        <p>ייצוג זוכים וחייבים: פתיחת תיקים, ביטול עיקולים והגבלות, צווי תשלומים והסדרי חוב.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="bituach">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h3>ביטוח לאומי</h3>
-        <p>תביעות נכות כללית ותאונות עבודה, הכנה לוועדות רפואיות והגשת עררים מול המוסד לביטוח לאומי.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="workaccident">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-        <h3>תאונות עבודה</h3>
-        <p>מיצוי זכויות מול הביטוח הלאומי וגורם אחראי לתאונה: דמי פגיעה, קביעת נכות ותביעות פיצויים נוספות.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="malpractice">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <h3>רשלנות רפואית</h3>
-        <p>ייצוג רגיש ומקצועי ללקוחות שנפגעו מרשלנות רפואית.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="torts">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg></div>
-        <h3>נזיקין ופיצויים</h3>
-        <p>ייצוג נפגעי תאונות דרכים, נפילות ורשלנות, ומיצוי פיצוי מלא מול המזיק וחברות הביטוח.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="contractors">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
-        <h3>רישום קבלנים</h3>
-        <p>ליווי בהליכי רישום והעלאת סיווג בפנקס הקבלנים, והתמודדות מול החלטות רשם הקבלנים.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-      <button type="button" class="practice-card reveal" data-service="civil">
-        <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
-        <h3>משפט אזרחי וחוזים</h3>
-        <p>ניסוח חוזים, תביעות כספיות וייצוג בסכסוכים אזרחיים, מייעוץ מקדים ועד ליטיגציה.</p>
-        <span class="link">למידע נוסף ←</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="wrap about-grid">
-    <div class="about-portrait reveal">
-      <div class="ring"></div>
-      <img src="omyr.jpeg" alt="עו&quot;ד עומייר גזמאוי">
-      <div class="about-badge"><span>7</span><small>שנים</small></div>
-    </div>
-    <div class="about-copy">
-      <span class="eyebrow reveal">אודות עורך הדין</span>
-      <h2 class="reveal">עו"ד עומייר גזמאוי</h2>
-      <p class="reveal">עו"ד עומייר גזמאוי פועל מכפר קרע ומעניק שירות ללקוחות בכל רחבי הארץ, מתוך עיקרון פשוט: עניינים של מקרקעין ואזרחות הם אישיים מאוד, והלקוחות ראויים לעורך דין שנמצא איתם באמת בכל שלב בתהליך.</p>
-      <p class="reveal">עם שבע שנות ניסיון ממוקד, כולל עשייה נרחבת בתחום המקרקעין במגזר הערבי, הוא משלב הכנה משפטית קפדנית עם נגישות ויושרה שבונות אמון לאורך זמן.</p>
-      <p class="reveal" style="font-family:'Frank Ruhl Libre',serif; font-size:19px; color:var(--navy); font-weight:600;">מהקרקע ועד המפתח: ליווי משפטי מלא.</p>
-      <div class="values-row reveal">
-        <div class="value-item"><b>יושרה</b><span>ליווי כן וברור בכל שלב</span></div>
-        <div class="value-item"><b>יסודיות</b><span>תשומת לב קפדנית לכל מסמך</span></div>
-        <div class="value-item"><b>נגישות</b><span>זמינים בדיוק כשצריך</span></div>
-      </div>
-      <a href="#contact" class="btn btn-navy reveal">לקביעת פגישת ייעוץ</a>
-    </div>
-  </div>
-</section>
-
-<section class="section tight">
-  <div class="wrap">
-    <div class="cta-banner reveal">
-      <div class="txt">
-        <h2>זקוקים לייעוץ משפטי? בואו נדבר עוד היום.</h2>
-        <p>פנו אלינו לפגישת ייעוץ חסויה, בטלפון, בוואטסאפ או בטופס למטה. רוב הפניות נענות באותו היום.</p>
-      </div>
-      <div class="ctas">
-        <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z"/></svg>
-          וואטסאפ
-        </a>
-        <a href="tel:+972505200261" class="btn btn-outline-light">התקשרו עכשיו</a>
-        <a href="#contact" class="btn btn-gold">שליחת הודעה</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-cream">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">חוות דעת לקוחות</span>
-      <h2>מה אומרים הלקוחות שלנו</h2>
-    </div>
-    <div class="testi-track" id="testiTrack">
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="quote">כל שאלה שהעליתי בתהליך רכישת הנכס נענתה בבהירות ובמהירות. מעולם לא הרגשתי כמו עוד תיק במספר.</p>
-        <div class="testi-who"><div class="av">ר</div><div><b>ר. חלבי</b><span>רוכשת נכס, אום אל־פחם</span></div></div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="quote">הסכסוך על ירושת הקרקע המשפחתית נפתר בסבלנות ובאכפתיות אמיתית למצב המשפחה שלנו. ממליצים בחום.</p>
-        <div class="testi-who"><div class="av">ס</div><div><b>ס. כנעאן</b><span>תיק ירושה, כפר קרע</span></div></div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="quote">מקצועיות כבר מהשיחה הראשונה. תהליך הרישום הוסבר צעד אחר צעד, בלי הפתעות.</p>
-        <div class="testi-who"><div class="av">מ</div><div><b>מ. יוסף</b><span>רישום נכס, באקה אל־גרביה</span></div></div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="quote">הטיפול בסכסוך השיתוף שלנו היה הוגן וקר רוח. אסירי תודה על הליווי לאורך כל הדרך.</p>
-        <div class="testi-who"><div class="av">א</div><div><b>א. סוואלחה</b><span>סכסוך שיתוף, טירה</span></div></div>
-      </div>
-    </div>
-    <div class="testi-nav reveal">
-      <button aria-label="הקודם" id="testiPrev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-      <button aria-label="הבא" id="testiNext"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">שאלות נפוצות</span>
-      <h2>שאלות בנושא מקרקעין, עם תשובות ברורות</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q"><span class="qtext">מה כדאי לבדוק לפני רכישת נכס?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>לפני כל רכישה אנו עורכים בדיקת טאבו מלאה, מוודאים שאין עיקולים או סכסוכים, בודקים היתרי בנייה וייעוד, ועוברים בקפידה על תנאי החוזה מטעמכם, כדי שלא תהיינה הפתעות אחרי החתימה.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q"><span class="qtext">כמה זמן אורכת מכירת קרקע בדרך כלל?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>משך הזמן משתנה בהתאם לסוג הנכס ומצב הרישום, אך עסקה פשוטה עם בעלות ברורה יכולה להיסגר לרוב תוך מספר חודשים. אנו מטפלים במשא ומתן, בחוזים ובתיאום מול עורך הדין של הצד השני כדי לשמור על קצב התהליך.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q"><span class="qtext">מה כולל תהליך רישום נכס?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>רישום מעביר את הבעלות המשפטית בטאבו או ברשות מקרקעי ישראל. אנו מכינים ומגישים את כל המסמכים הנדרשים, פותרים כל בעיה שעולה, ומוודאים שהרישום מסתיים כראוי על שמכם.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q"><span class="qtext">כיצד נפתרים סכסוכי שיתוף בנכס?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>רוב עניני השיתוף, בין בני משפחה או שותפים, ניתנים לפתרון באמצעות משא ומתן או חלוקה פורמלית של הנכס. כאשר אין אפשרות להגיע להסכמה, אנו מייצגים את האינטרסים שלכם בגישור או בהליכים משפטיים.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q"><span class="qtext">נפגעתי בתאונת עבודה, לאילו זכויות אני זכאי?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>בהתאם לנסיבות, ייתכן שתהיו זכאים לדמי פגיעה, לקביעת דרגת נכות מעבודה ולגמלה בהתאם, ולעיתים גם לתביעת פיצויים נוספת נגד גורם אחראי לתאונה. אנו בוחנים את שני המסלולים במקביל כדי למצות עבורכם את מלוא הזכויות.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q"><span class="qtext">מה זו ועדה רפואית וכיצד מתכוננים אליה?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>ועדה רפואית קובעת את דרגת הנכות שלכם מול הביטוח הלאומי, וההחלטה משפיעה ישירות על הזכויות הכספיות שלכם. אנו מלווים אתכם בהכנת המסמכים הרפואיים ובהצגת המגבלות בצורה מלאה, ומייצגים גם בהגשת ערר אם ההחלטה אינה משקפת את מצבכם.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-cream" id="contact">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">יצירת קשר</span>
-      <h2>דברו עם עורך דין עוד היום</h2>
-      <p>פגישות ייעוץ חסויות זמינות בטלפון, בוואטסאפ או פנים אל פנים במשרדנו בכפר קרע, בשירות לכל רחבי הארץ.</p>
-    </div>
-    <div class="contact-grid reveal">
-      <div class="contact-info">
-        <h3>פרטי התקשרות</h3>
-        <p>פנו אלינו ישירות, או השאירו פרטים למטה ונחזור אליכם באותו יום עסקים.</p>
-        <div class="contact-row">
-          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><b>משרד</b><span>כפר קרע, ישראל · שירות בכל רחבי הארץ</span></div>
-        </div>
-        <div class="contact-row">
-          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><b>טלפון</b><a href="tel:+972505200261">050-520-0261</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
-          <div><b>אימייל</b><a href="mailto:omyr.law.office@gmail.com">omyr.law.office@gmail.com</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <div><b>שעות פעילות</b><span>א'–ה', 9:00–18:00</span></div>
-        </div>
-        <div class="contact-row">
-          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z"/></svg></div>
-          <div><b>וואטסאפ</b><a href="https://wa.me/972505200261" target="_blank" rel="noopener">שלחו לנו הודעה ישירות</a></div>
-        </div>
-      </div>
-      <form class="contact-form" id="contactForm">
-        <h3>שליחת הודעה</h3>
-        <input type="hidden" name="access_key" value="333df161-07cc-4638-ab4c-1670eeb4379b">
-        <input type="hidden" name="subject" value="פנייה חדשה מאתר משרד עורכי הדין">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="form-row">
-          <div class="field"><label for="fname">שם מלא</label><input id="fname" name="name" type="text" placeholder="השם שלכם" required></div>
-          <div class="field"><label for="fphone">טלפון</label><input id="fphone" name="phone" type="tel" placeholder="05X-XXX-XXXX" required></div>
-        </div>
-        <div class="field"><label for="fservice">תחום משפטי</label>
-          <select id="fservice" name="service">
-            <option>מקרקעין, תכנון ובנייה</option>
-            <option>הוצאה לפועל</option>
-            <option>ביטוח לאומי</option>
-            <option>תאונות עבודה</option>
-            <option>רשלנות רפואית</option>
-            <option>נזיקין ופיצויים</option>
-            <option>רישום קבלנים</option>
-            <option>משפט אזרחי וחוזים</option>
-          </select>
-        </div>
-        <div class="field"><label for="fmsg">הודעה</label><textarea id="fmsg" name="message" placeholder="תארו בקצרה את המצב שלכם..."></textarea></div>
-        <button type="submit" class="btn btn-navy" style="width:100%; margin-top:6px;">בקשת פגישת ייעוץ</button>
-        <p id="formStatus" style="text-align:center; margin-top:10px; font-size:14.5px; display:none;"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">
-          <svg width="30" height="30" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#C8A75D" stroke-width="1.4"/><path d="M14 26L22 12L30 26" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M16.5 26H27.5" stroke="#C8A75D" stroke-width="1.6" stroke-linecap="round"/></svg>
-          משרד עורכי דין
-        </div>
-        <p style="font-size:14.5px; max-width:280px; margin-bottom:20px;">ליווי משפטי אישי ומקצועי בדיני מקרקעין ואזרחי. פועלים מכפר קרע, בשירות לכל רחבי הארץ.</p>
-        <div class="contact-row" style="margin-bottom:0;">
-          <a href="https://wa.me/972505200261" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">וואטסאפ</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>קישורים מהירים</h4>
-        <ul>
-          <li><a href="#about">אודות</a></li>
-          <li><a href="#practice">תחומי עיסוק</a></li>
-          <li><a href="#faq">שאלות נפוצות</a></li>
-          <li><a href="#contact">צור קשר</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>תחומי עיסוק</h4>
-        <ul>
-          <li><a href="#practice">מקרקעין, תכנון ובנייה</a></li>
-          <li><a href="#practice">הוצאה לפועל</a></li>
-          <li><a href="#practice">ביטוח לאומי</a></li>
-          <li><a href="#practice">תאונות עבודה</a></li>
-          <li><a href="#practice">רשלנות רפואית</a></li>
-          <li><a href="#practice">נזיקין ופיצויים</a></li>
-          <li><a href="#practice">רישום קבלנים</a></li>
-          <li><a href="#practice">משפט אזרחי וחוזים</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>פרטי משרד</h4>
-        <ul>
-          <li>כפר קרע, ישראל</li>
-          <li><a href="tel:+972505200261">050-520-0261</a></li>
-          <li><a href="mailto:omyr.law.office@gmail.com">omyr.law.office@gmail.com</a></li>
-          <li>א'–ה', 9:00–18:00</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 משרד עורכי דין. כל הזכויות שמורות.</span>
-      <div class="links">
-        <a href="#">מדיניות פרטיות</a>
-        <a href="#">הצהרת נגישות</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<div class="sticky-cta">
-  <a href="tel:+972505200261" class="sc-call">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    התקשרו
-  </a>
-  <a href="https://wa.me/972505200261" class="sc-wa" target="_blank" rel="noopener">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z"/></svg>
-    וואטסאפ
-  </a>
-</div>
-
-<a href="https://wa.me/972505200261" class="fab-wa" target="_blank" rel="noopener" aria-label="צ'אט בוואטסאפ">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6zM12.06 18.4a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.66.67-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.08z"/></svg>
-</a>
-
-<!-- ============ SERVICE DETAIL MODAL ============ -->
-<div class="modal-overlay" id="serviceModal" role="presentation">
-  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button type="button" class="modal-close" id="modalClose" aria-label="סגירה">✕</button>
-    <div class="modal-icon" id="modalIcon"></div>
-    <span class="eyebrow">תחום עיסוק</span>
-    <h3 id="modalTitle"></h3>
-    <div class="modal-body" id="modalBody"></div>
-    <div class="modal-cta">
-      <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z"/></svg>
-        וואטסאפ בנושא זה
+        <span class="word">משרד עורכי דין<small>כפר קרע · מקרקעין ודין אזרחי</small></span>
       </a>
-      <a href="#contact" class="btn btn-navy" id="modalContactLink">קביעת פגישת ייעוץ</a>
+      <nav class="primary">
+        <a href="#who">למי אנחנו כאן</a>
+        <a href="#practice">תחומי עיסוק</a>
+        <a href="#about">אודות</a>
+        <a href="#faq">שאלות נפוצות</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+972505200261" class="phone-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          050-520-0261
+        </a>
+        <a href="#contact" class="btn btn-gold btn-sm">קביעת פגישת ייעוץ</a>
+        <button class="menu-toggle" aria-label="תפריט"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">עורך דין מקרקעין · ליווי עסקאות נדל״ן וקרקעות בכל הארץ</span>
+        <h1>מגנים על הזכויות שלך<br><em>לפני שהעסקה מתחילה.</em></h1>
+        <p class="lede">ליווי משפטי מלא בעסקאות נדל״ן וקרקעות, מבדיקת הזכויות ועד לרישום הסופי. שבע שנות ניסיון ושירות
+          אישי, בפריסה ארצית.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-gold">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+            </svg>
+            קביעת פגישת ייעוץ
+          </a>
+          <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6zM12.06 18.4a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.66.67-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.08zm3.6-4.94c-.2-.1-1.16-.57-1.34-.64-.18-.07-.31-.1-.44.1-.13.2-.5.63-.62.77-.11.13-.23.15-.42.05a5.4 5.4 0 0 1-1.6-.99 5.98 5.98 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.24.3-.36.1-.12.13-.2.2-.34.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.38 2.1 3.35 2.94.47.2.83.32 1.12.42.47.15.9.13 1.24.08.38-.06 1.16-.47 1.32-.93.16-.45.16-.84.11-.92-.05-.08-.18-.13-.38-.23z" />
+            </svg>
+            וואטסאפ
+          </a>
+          <a href="tel:+972505200261" class="btn btn-outline-light">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            התקשרו עכשיו
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="stat"><b>7</b><span>שנות ניסיון</span></div>
+          <div class="stat"><b>בכל הארץ</b><span>שירות בכל רחבי ישראל</span></div>
+          <div class="stat"><b>6</b><span>תחומי עיסוק</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="frame">
+          <svg viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="90" width="160" height="150" rx="2" stroke="#C8A75D" stroke-width="1.3" opacity="0.85" />
+            <rect x="50" y="120" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6" />
+            <rect x="96" y="120" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6" />
+            <rect x="142" y="120" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6" />
+            <rect x="50" y="170" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6" />
+            <rect x="96" y="170" width="28" height="60" stroke="#E3CE9E" stroke-width="1.3" opacity="0.9" />
+            <rect x="142" y="170" width="28" height="34" stroke="#C8A75D" stroke-width="1" opacity="0.6" />
+            <path d="M20 90L110 30L200 90" stroke="#E3CE9E" stroke-width="1.6" />
+            <circle cx="110" cy="30" r="3.5" fill="#C8A75D" />
+            <circle cx="110" cy="146" r="46" stroke="#C8A75D" stroke-width="0.7" opacity="0.35" />
+          </svg>
+          <div class="card-float">
+            <div class="ico">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11l3 3L22 4" />
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg>
+            </div>
+            <div><b>ייצוג מהימן</b><span>מקרקעין עד לחתימה</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream" id="who">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">למי אנחנו כאן</span>
+        <h2>עסקת נדל״ן בטוחה מתחילה בבדיקה משפטית נכונה</h2>
+        <p>בין אם מדובר בקרקע משפחתית או בעסקת מכירה, לפני כל חתימה כדאי לבדוק את הזכויות והאפשרויות המשפטיות.</p>
+      </div>
+      <div class="why-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z" />
+              <path d="M9 3v15M15 6v15" />
+            </svg></div>
+          <h3>יש לכם קרקע משפחתית?</h3>
+          <p>לא תמיד ברור מי הבעלים החוקיים, כמה שותפים רשומים על הקרקע, ואילו זכויות עומדות לרשותכם. לפני כל מכירה,
+            חלוקה או רישום נבדוק את הזכויות והאפשרויות המשפטיות לעומק.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <path d="M9 22V12h6v10" />
+            </svg></div>
+          <h3>עומדים לפני עסקת נדל״ן?</h3>
+          <p>חוזה לא ברור, חריגות בנייה, חובות ועיקולים או בעיית טאבו יכולים לסכן כל עסקה. נבדוק את כל הפרטים ונלווה
+            אתכם מהחוזה ועד למפתח.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">למה לבחור בנו</span>
+        <h2>ליווי משפטי שאפשר לסמוך עליו, מהשיחה הראשונה ועד החתימה הסופית</h2>
+        <p>כל תיק זוכה לתשומת לב אישית וישירה, לא לצוות מתחלף. זה מה ששבע שנות עשייה בונות.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="8" r="5" />
+              <path d="M20 21a8 8 0 1 0-16 0" />
+            </svg></div>
+          <h3>זמינות גבוהה</h3>
+          <p>ליווי אישי וזמינות גבוהה. אתם יודעים בכל שלב בדיוק איפה התיק עומד.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg></div>
+          <h3>7 שנות ניסיון</h3>
+          <p>עיסוק ממוקד בדיני מקרקעין ואזרחי, עם היכרות מעמיקה עם השוק המקומי.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <h3>פריסה ארצית</h3>
+          <p>ייצוג לקוחות בכל רחבי הארץ, עם ניסיון עומק במגזר הערבי.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg></div>
+          <h3>מענה מהיר</h3>
+          <p>שאלות ועדכוני תיק נענים במהירות, בטלפון, בוואטסאפ או במייל.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg></div>
+          <h3>ליווי משפטי מלא</h3>
+          <p>תמיכה מקצה לקצה, מבדיקת חוזים ובדיקת נאותות ועד רישום.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></div>
+          <h3>ייצוג מהימן</h3>
+          <p>טיפול קפדני ויסודי בתיק ששומר על האינטרסים שלכם בכל שלב.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream" id="practice">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">תחומי עיסוק</span>
+        <h2>ליווי משפטי ממוקד בדיני מקרקעין ואזרחי</h2>
+        <p>עסקאות מקרקעין הן ליבת העשייה שלנו, לצד מגוון שירותים אזרחיים לרגעים החשובים ביותר.</p>
+      </div>
+      <div class="practice-grid">
+        <button type="button" class="practice-card featured reveal" data-service="realestate">
+          <div class="card-art">
+            <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="60" width="160" height="110" rx="2" stroke="#E3CE9E" stroke-width="1.3" opacity="0.85" />
+              <rect x="50" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6" />
+              <rect x="96" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6" />
+              <rect x="142" y="90" width="28" height="34" stroke="#E3CE9E" stroke-width="1" opacity="0.6" />
+              <rect x="96" y="140" width="28" height="30" stroke="#C8A75D" stroke-width="1.3" opacity="0.9" />
+              <path d="M20 60L110 5L200 60" stroke="#C8A75D" stroke-width="1.6" />
+              <circle cx="110" cy="5" r="3.2" fill="#C8A75D" />
+            </svg>
+          </div>
+          <div class="p-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3-3.5 3.5zm0 0L19 4" />
+            </svg></div>
+          <h3>מקרקעין, תכנון ובנייה</h3>
+          <p>קנייה ומכירה של דירות וקרקעות, בדיקות זכויות וטאבו, היתרי בנייה וחריגות בנייה, הסכמי שיתוף ופירוק שיתוף,
+            ירושה ורישום זכויות, מהצעה ראשונה ועד רישום סופי.</p>
+          <span class="link">לפרטים המלאים על מקרקעין ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="execution">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="3" y="11" width="18" height="10" rx="1" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg></div>
+          <h3>הוצאה לפועל</h3>
+          <p>ייצוג זוכים וחייבים: פתיחת תיקים, ביטול עיקולים והגבלות, צווי תשלומים והסדרי חוב.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="bituach">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg></div>
+          <h3>ביטוח לאומי</h3>
+          <p>תביעות נכות כללית ותאונות עבודה, הכנה לוועדות רפואיות והגשת עררים מול המוסד לביטוח לאומי.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="workaccident">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg></div>
+          <h3>תאונות עבודה</h3>
+          <p>מיצוי זכויות מול הביטוח הלאומי וגורם אחראי לתאונה: דמי פגיעה, קביעת נכות ותביעות פיצויים נוספות.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="malpractice">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg></div>
+          <h3>רשלנות רפואית</h3>
+          <p>ייצוג רגיש ומקצועי ללקוחות שנפגעו מרשלנות רפואית.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="torts">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 9v4M12 17h.01" />
+              <circle cx="12" cy="12" r="10" />
+            </svg></div>
+          <h3>נזיקין ופיצויים</h3>
+          <p>ייצוג נפגעי תאונות דרכים, נפילות ורשלנות, ומיצוי פיצוי מלא מול המזיק וחברות הביטוח.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="contractors">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="8" y="2" width="8" height="4" rx="1" />
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+              <path d="m9 14 2 2 4-4" />
+            </svg></div>
+          <h3>רישום קבלנים</h3>
+          <p>ליווי בהליכי רישום והעלאת סיווג בפנקס הקבלנים, והתמודדות מול החלטות רשם הקבלנים.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+        <button type="button" class="practice-card reveal" data-service="civil">
+          <div class="p-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <path d="M9 9h6v6H9z" />
+            </svg></div>
+          <h3>משפט אזרחי וחוזים</h3>
+          <p>ניסוח חוזים, תביעות כספיות וייצוג בסכסוכים אזרחיים, מייעוץ מקדים ועד ליטיגציה.</p>
+          <span class="link">למידע נוסף ←</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-portrait reveal">
+        <div class="ring"></div>
+        <img src="omyr.jpeg" alt="עו&quot;ד עומייר גזמאוי">
+        <div class="about-badge"><span>7</span><small>שנים</small></div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow reveal">אודות עורך הדין</span>
+        <h2 class="reveal">עו"ד עומייר גזמאוי</h2>
+        <p class="reveal">עו"ד עומייר גזמאוי פועל מכפר קרע ומעניק שירות ללקוחות בכל רחבי הארץ, מתוך עיקרון פשוט: עניינים
+          של מקרקעין ואזרחות הם אישיים מאוד, והלקוחות ראויים לעורך דין שנמצא איתם באמת בכל שלב בתהליך.</p>
+        <p class="reveal">עם שבע שנות ניסיון ממוקד, כולל עשייה נרחבת בתחום המקרקעין במגזר הערבי, הוא משלב הכנה משפטית
+          קפדנית עם נגישות ויושרה שבונות אמון לאורך זמן.</p>
+        <p class="reveal"
+          style="font-family:'Frank Ruhl Libre',serif; font-size:19px; color:var(--navy); font-weight:600;">מהקרקע ועד
+          המפתח: ליווי משפטי מלא.</p>
+        <div class="values-row reveal">
+          <div class="value-item"><b>יושרה</b><span>ליווי כן וברור בכל שלב</span></div>
+          <div class="value-item"><b>יסודיות</b><span>תשומת לב קפדנית לכל מסמך</span></div>
+          <div class="value-item"><b>נגישות</b><span>זמינים בדיוק כשצריך</span></div>
+        </div>
+        <a href="#contact" class="btn btn-navy reveal">לקביעת פגישת ייעוץ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="cta-banner reveal">
+        <div class="txt">
+          <h2>זקוקים לייעוץ משפטי? בואו נדבר עוד היום.</h2>
+          <p>פנו אלינו לפגישת ייעוץ חסויה, בטלפון, בוואטסאפ או בטופס למטה. רוב הפניות נענות באותו היום.</p>
+        </div>
+        <div class="ctas">
+          <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z" />
+            </svg>
+            וואטסאפ
+          </a>
+          <a href="tel:+972505200261" class="btn btn-outline-light">התקשרו עכשיו</a>
+          <a href="#contact" class="btn btn-gold">שליחת הודעה</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">חוות דעת לקוחות</span>
+        <h2>מה אומרים הלקוחות שלנו</h2>
+      </div>
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">כל שאלה שהעליתי בתהליך רכישת הנכס נענתה בבהירות ובמהירות. מעולם לא הרגשתי כמו עוד תיק במספר.
+          </p>
+          <div class="testi-who">
+            <div class="av">ר</div>
+            <div><b>ר. חלבי</b><span>רוכשת נכס, אום אל־פחם</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">הסכסוך על ירושת הקרקע המשפחתית נפתר בסבלנות ובאכפתיות אמיתית למצב המשפחה שלנו. ממליצים בחום.
+          </p>
+          <div class="testi-who">
+            <div class="av">ס</div>
+            <div><b>ס. כנעאן</b><span>תיק ירושה, כפר קרע</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">מקצועיות כבר מהשיחה הראשונה. תהליך הרישום הוסבר צעד אחר צעד, בלי הפתעות.</p>
+          <div class="testi-who">
+            <div class="av">מ</div>
+            <div><b>מ. יוסף</b><span>רישום נכס, באקה אל־גרביה</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">הטיפול בסכסוך השיתוף שלנו היה הוגן וקר רוח. אסירי תודה על הליווי לאורך כל הדרך.</p>
+          <div class="testi-who">
+            <div class="av">א</div>
+            <div><b>א. סוואלחה</b><span>סכסוך שיתוף, טירה</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-nav reveal">
+        <button aria-label="הקודם" id="testiPrev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg></button>
+        <button aria-label="הבא" id="testiNext"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">שאלות נפוצות</span>
+        <h2>שאלות בנושא מקרקעין, עם תשובות ברורות</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q"><span class="qtext">מה כדאי לבדוק לפני רכישת נכס?</span><span
+              class="plus"></span></button>
+          <div class="faq-a">
+            <p>לפני כל רכישה אנו עורכים בדיקת טאבו מלאה, מוודאים שאין עיקולים או סכסוכים, בודקים היתרי בנייה וייעוד,
+              ועוברים בקפידה על תנאי החוזה מטעמכם, כדי שלא תהיינה הפתעות אחרי החתימה.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span class="qtext">כמה זמן אורכת מכירת קרקע בדרך כלל?</span><span
+              class="plus"></span></button>
+          <div class="faq-a">
+            <p>משך הזמן משתנה בהתאם לסוג הנכס ומצב הרישום, אך עסקה פשוטה עם בעלות ברורה יכולה להיסגר לרוב תוך מספר
+              חודשים. אנו מטפלים במשא ומתן, בחוזים ובתיאום מול עורך הדין של הצד השני כדי לשמור על קצב התהליך.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span class="qtext">מה כולל תהליך רישום נכס?</span><span class="plus"></span></button>
+          <div class="faq-a">
+            <p>רישום מעביר את הבעלות המשפטית בטאבו או ברשות מקרקעי ישראל. אנו מכינים ומגישים את כל המסמכים הנדרשים,
+              פותרים כל בעיה שעולה, ומוודאים שהרישום מסתיים כראוי על שמכם.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span class="qtext">כיצד נפתרים סכסוכי שיתוף בנכס?</span><span
+              class="plus"></span></button>
+          <div class="faq-a">
+            <p>רוב עניני השיתוף, בין בני משפחה או שותפים, ניתנים לפתרון באמצעות משא ומתן או חלוקה פורמלית של הנכס. כאשר
+              אין אפשרות להגיע להסכמה, אנו מייצגים את האינטרסים שלכם בגישור או בהליכים משפטיים.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span class="qtext">נפגעתי בתאונת עבודה, לאילו זכויות אני זכאי?</span><span
+              class="plus"></span></button>
+          <div class="faq-a">
+            <p>בהתאם לנסיבות, ייתכן שתהיו זכאים לדמי פגיעה, לקביעת דרגת נכות מעבודה ולגמלה בהתאם, ולעיתים גם לתביעת
+              פיצויים נוספת נגד גורם אחראי לתאונה. אנו בוחנים את שני המסלולים במקביל כדי למצות עבורכם את מלוא הזכויות.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span class="qtext">מה זו ועדה רפואית וכיצד מתכוננים אליה?</span><span
+              class="plus"></span></button>
+          <div class="faq-a">
+            <p>ועדה רפואית קובעת את דרגת הנכות שלכם מול הביטוח הלאומי, וההחלטה משפיעה ישירות על הזכויות הכספיות שלכם.
+              אנו מלווים אתכם בהכנת המסמכים הרפואיים ובהצגת המגבלות בצורה מלאה, ומייצגים גם בהגשת ערר אם ההחלטה אינה
+              משקפת את מצבכם.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">יצירת קשר</span>
+        <h2>דברו עם עורך דין עוד היום</h2>
+        <p>פגישות ייעוץ חסויות זמינות בטלפון, בוואטסאפ או פנים אל פנים במשרדנו בכפר קרע, בשירות לכל רחבי הארץ.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>פרטי התקשרות</h3>
+          <p>פנו אלינו ישירות, או השאירו פרטים למטה ונחזור אליכם באותו יום עסקים.</p>
+          <div class="contact-row">
+            <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div><b>משרד</b><span>כפר קרע, ישראל · שירות בכל רחבי הארץ</span></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg></div>
+            <div><b>טלפון</b><a href="tel:+972505200261">050-520-0261</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M22 6l-10 7L2 6" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg></div>
+            <div><b>אימייל</b><a href="mailto:Omyer123@gmail.com">Omyer123@gmail.com</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg></div>
+            <div><b>שעות פעילות</b><span>א'–ה', 9:00–18:00</span></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z" />
+              </svg></div>
+            <div><b>וואטסאפ</b><a href="https://wa.me/972505200261" target="_blank" rel="noopener">שלחו לנו הודעה
+                ישירות</a></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>שליחת הודעה</h3>
+          <input type="hidden" name="access_key" value="333df161-07cc-4638-ab4c-1670eeb4379b">
+          <input type="hidden" name="subject" value="פנייה חדשה מאתר משרד עורכי הדין">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-row">
+            <div class="field"><label for="fname">שם מלא</label><input id="fname" name="name" type="text"
+                placeholder="השם שלכם" required></div>
+            <div class="field"><label for="fphone">טלפון</label><input id="fphone" name="phone" type="tel"
+                placeholder="05X-XXX-XXXX" required></div>
+          </div>
+          <div class="field"><label for="fservice">תחום משפטי</label>
+            <select id="fservice" name="service">
+              <option>מקרקעין, תכנון ובנייה</option>
+              <option>הוצאה לפועל</option>
+              <option>ביטוח לאומי</option>
+              <option>תאונות עבודה</option>
+              <option>רשלנות רפואית</option>
+              <option>נזיקין ופיצויים</option>
+              <option>רישום קבלנים</option>
+              <option>משפט אזרחי וחוזים</option>
+            </select>
+          </div>
+          <div class="field"><label for="fmsg">הודעה</label><textarea id="fmsg" name="message"
+              placeholder="תארו בקצרה את המצב שלכם..."></textarea></div>
+          <button type="submit" class="btn btn-navy" style="width:100%; margin-top:6px;">בקשת פגישת ייעוץ</button>
+          <p id="formStatus" style="text-align:center; margin-top:10px; font-size:14.5px; display:none;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+              <circle cx="22" cy="22" r="21" stroke="#C8A75D" stroke-width="1.4" />
+              <path d="M14 26L22 12L30 26" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" />
+              <path d="M16.5 26H27.5" stroke="#C8A75D" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            משרד עורכי דין
+          </div>
+          <p style="font-size:14.5px; max-width:280px; margin-bottom:20px;">ליווי משפטי אישי ומקצועי בדיני מקרקעין
+            ואזרחי. פועלים מכפר קרע, בשירות לכל רחבי הארץ.</p>
+          <div class="contact-row" style="margin-bottom:0;">
+            <a href="https://wa.me/972505200261" class="btn btn-whatsapp btn-sm" target="_blank"
+              rel="noopener">וואטסאפ</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>קישורים מהירים</h4>
+          <ul>
+            <li><a href="#about">אודות</a></li>
+            <li><a href="#practice">תחומי עיסוק</a></li>
+            <li><a href="#faq">שאלות נפוצות</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>תחומי עיסוק</h4>
+          <ul>
+            <li><a href="#practice">מקרקעין, תכנון ובנייה</a></li>
+            <li><a href="#practice">הוצאה לפועל</a></li>
+            <li><a href="#practice">ביטוח לאומי</a></li>
+            <li><a href="#practice">תאונות עבודה</a></li>
+            <li><a href="#practice">רשלנות רפואית</a></li>
+            <li><a href="#practice">נזיקין ופיצויים</a></li>
+            <li><a href="#practice">רישום קבלנים</a></li>
+            <li><a href="#practice">משפט אזרחי וחוזים</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>פרטי משרד</h4>
+          <ul>
+            <li>כפר קרע, ישראל</li>
+            <li><a href="tel:+972505200261">050-520-0261</a></li>
+            <li><a href="mailto:Omyer123@gmail.com">Omyer123@gmail.com</a></li>
+            <li>א'–ה', 9:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 משרד עורכי דין. כל הזכויות שמורות.</span>
+        <div class="links">
+          <a href="#">מדיניות פרטיות</a>
+          <a href="#">הצהרת נגישות</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <a href="tel:+972505200261" class="sc-call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      התקשרו
+    </a>
+    <a href="https://wa.me/972505200261" class="sc-wa" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z" />
+      </svg>
+      וואטסאפ
+    </a>
+  </div>
+
+  <a href="https://wa.me/972505200261" class="fab-wa" target="_blank" rel="noopener" aria-label="צ'אט בוואטסאפ">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6zM12.06 18.4a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.66.67-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.08z" />
+    </svg>
+  </a>
+
+  <!-- ============ SERVICE DETAIL MODAL ============ -->
+  <div class="modal-overlay" id="serviceModal" role="presentation">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="סגירה">✕</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <span class="eyebrow">תחום עיסוק</span>
+      <h3 id="modalTitle"></h3>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-cta">
+        <a href="https://wa.me/972505200261" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.6z" />
+          </svg>
+          וואטסאפ בנושא זה
+        </a>
+        <a href="#contact" class="btn btn-navy" id="modalContactLink">קביעת פגישת ייעוץ</a>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  // Service detail content (populates the modal)
-  const serviceDetails = {
-    realestate: `
+  <script>
+    // Service detail content (populates the modal)
+    const serviceDetails = {
+      realestate: `
       <p>תחום המקרקעין, התכנון והבנייה הוא אחד התחומים המורכבים והמשמעותיים ביותר במשפט האזרחי. עסקאות נדל"ן, ייזום, היתרי בנייה, שינויי ייעוד וסכסוכים קנייניים כרוכים בסוגיות משפטיות, תכנוניות וכלכליות, ולכן דורשים בחינה מקצועית וליווי צמוד כבר בשלב מוקדם.</p>
       <h4>הליווי המשפטי שלנו כולל</h4>
       <ul>
@@ -1014,7 +2187,7 @@
       </ul>
       <p>המשרד פועל על בסיס חוק המקרקעין, חוק המכר (דירות) וחוק התכנון והבנייה, ומלווה כל תיק מהבדיקה הראשונית ועד לרישום הסופי.</p>
     `,
-    execution: `
+      execution: `
       <p>מערכת ההוצאה לפועל נועדה לאפשר אכיפה יעילה של פסקי דין, שטרות, שיקים וחיובים כספיים, ולצד זאת מבטיחה גם את זכויותיהם של חייבים במסגרת הסדרים והליכים הקבועים בחוק.</p>
       <h4>השירותים שלנו כוללים</h4>
       <ul>
@@ -1027,7 +2200,7 @@
       </ul>
       <p>אנו מייצגים זוכים החל מפתיחת התיק ועד לגביית החוב בפועל, וכן חייבים המבקשים להתמודד עם החוב בדרך המשפטית הנכונה.</p>
     `,
-    bituach: `
+      bituach: `
       <p>המוסד לביטוח לאומי מעניק זכויות סוציאליות שונות במצבים שבהם נפגעה יכולתו של אדם לעבוד, להתפרנס או לנהל אורח חיים עצמאי. הגשת תביעה, הכנת מסמכים רפואיים והופעה בפני ועדות רפואיות דורשות היכרות עם הדין וההליך.</p>
       <h4>אנו מלווים בתחומים הבאים</h4>
       <ul>
@@ -1039,7 +2212,7 @@
       </ul>
       <p>ההליך מבוסס על חוק הביטוח הלאומי ותקנותיו, וטיפול נכון ומקצועי עשוי להשפיע באופן משמעותי על מיצוי הזכויות המגיעות לכם.</p>
     `,
-    workaccident: `
+      workaccident: `
       <p>תאונת עבודה עלולה לשנות חיים בתוך זמן קצר ולהשפיע על הבריאות, היכולת לעבוד וההכנסה. עובד שנפגע במהלך עבודתו או עקב עבודתו עשוי להיות זכאי לזכויות מול המוסד לביטוח לאומי, ולעיתים גם לפיצוי נוסף מגורם אחראי.</p>
       <h4>מה נחשב לתאונת עבודה</h4>
       <ul>
@@ -1056,7 +2229,7 @@
       </ul>
       <p>אנו בוחנים במקביל את שני המסלולים האפשריים, מול הביטוח הלאומי ומול הגורם האחראי, כדי למצות עבורכם את מלוא הזכויות.</p>
     `,
-    malpractice: `
+      malpractice: `
       <p>כאשר נגרם נזק עקב טיפול רפואי רשלני, בין אם באבחון, בטיפול או במעקב, ייתכן שקמה לנפגע זכות לפיצוי בגין הנזק שנגרם לו ולבני משפחתו.</p>
       <h4>הליווי שלנו כולל</h4>
       <ul>
@@ -1068,7 +2241,7 @@
       </ul>
       <p>מדובר בתיקים מורכבים ורגישים במיוחד, ואנו מקפידים על ליווי אישי ותומך לצד עבודה משפטית יסודית ומדויקת.</p>
     `,
-    torts: `
+      torts: `
       <p>דיני הנזיקין עוסקים באחריות של אדם, גוף או רשות לנזק שנגרם לאחר. כאשר אדם נפגע עקב מעשה או מחדל של גורם אחר, עשויה לקום לו זכות לפיצוי בהתאם לנסיבות המקרה ולהוראות הדין.</p>
       <h4>אנו מטפלים במגוון מקרים, ובהם</h4>
       <ul>
@@ -1080,7 +2253,7 @@
       <h4>פיצויים אפשריים</h4>
       <p>בהתאם לנסיבות המקרה, ניתן לבחון זכאות לפיצוי בגין כאב וסבל, הפסדי שכר בעבר ובעתיד, פגיעה בכושר ההשתכרות, הוצאות רפואיות ושיקומיות, עזרת צד שלישי ונזקי רכוש.</p>
     `,
-    contractors: `
+      contractors: `
       <p>רישום בפנקס הקבלנים הוא תנאי הכרחי לביצוע עבודות מסוימות בענף הבנייה. הרישום מעניק לקבלן הכרה רשמית ומאפשר לו לבצע עבודות בהתאם לסיווגו ולהיקף הכספי שנקבע לו.</p>
       <h4>אנו מלווים בהליכים הבאים</h4>
       <ul>
@@ -1092,7 +2265,7 @@
       </ul>
       <p>בקשה שאינה ערוכה כנדרש עלולה לגרום לעיכובים ואף לדחייה, ולכן ליווי משפטי מסודר כבר מתחילת התהליך חוסך זמן וכסף.</p>
     `,
-    civil: `
+      civil: `
       <p>המשפט האזרחי מהווה את התשתית המשפטית להסדרת מערכות היחסים, החובות והזכויות בין אדם לחברו, בין עסקים ובין פרטים לתאגידים. תחום זה נועד להבטיח כיבוד הסכמים, הגנה על זכויות קנייניות ומענה משפטי הוגן ויעיל.</p>
       <h4>הליווי שלנו כולל</h4>
       <ul>
@@ -1102,116 +2275,117 @@
       </ul>
       <p>במשפט האזרחי, ללוחות הזמנים כמו תקופת ההתיישנות ומועדי הגשת כתבי טענות יש משמעות מכרעת על תוצאת ההליך, ולכן חשוב לפנות לייעוץ מוקדם ככל האפשר.</p>
     `
-  };
+    };
 
-  const serviceModal = document.getElementById('serviceModal');
-  const modalPanel = serviceModal.querySelector('.modal-panel');
-  const modalIcon = document.getElementById('modalIcon');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalBody = document.getElementById('modalBody');
-  let lastFocusedCard = null;
+    const serviceModal = document.getElementById('serviceModal');
+    const modalPanel = serviceModal.querySelector('.modal-panel');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    let lastFocusedCard = null;
 
-  function openServiceModal(card){
-    const key = card.dataset.service;
-    if(!serviceDetails[key]) return;
-    lastFocusedCard = card;
-    modalIcon.innerHTML = card.querySelector('.p-ico').innerHTML;
-    modalTitle.textContent = card.querySelector('h3').textContent;
-    modalBody.innerHTML = serviceDetails[key];
-    serviceModal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    document.getElementById('modalClose').focus();
-  }
-  function closeServiceModal(){
-    serviceModal.classList.remove('open');
-    document.body.style.overflow = '';
-    if(lastFocusedCard) lastFocusedCard.focus();
-  }
+    function openServiceModal(card) {
+      const key = card.dataset.service;
+      if (!serviceDetails[key]) return;
+      lastFocusedCard = card;
+      modalIcon.innerHTML = card.querySelector('.p-ico').innerHTML;
+      modalTitle.textContent = card.querySelector('h3').textContent;
+      modalBody.innerHTML = serviceDetails[key];
+      serviceModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('modalClose').focus();
+    }
+    function closeServiceModal() {
+      serviceModal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastFocusedCard) lastFocusedCard.focus();
+    }
 
-  document.querySelectorAll('.practice-card').forEach(card=>{
-    card.addEventListener('click', ()=> openServiceModal(card));
-  });
-  document.getElementById('modalClose').addEventListener('click', closeServiceModal);
-  document.getElementById('modalContactLink').addEventListener('click', closeServiceModal);
-  serviceModal.addEventListener('click', (e)=>{ if(e.target === serviceModal) closeServiceModal(); });
-  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && serviceModal.classList.contains('open')) closeServiceModal(); });
+    document.querySelectorAll('.practice-card').forEach(card => {
+      card.addEventListener('click', () => openServiceModal(card));
+    });
+    document.getElementById('modalClose').addEventListener('click', closeServiceModal);
+    document.getElementById('modalContactLink').addEventListener('click', closeServiceModal);
+    serviceModal.addEventListener('click', (e) => { if (e.target === serviceModal) closeServiceModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && serviceModal.classList.contains('open')) closeServiceModal(); });
 
-  // Reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12});
-  revealEls.forEach(el=>io.observe(el));
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
 
-  // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(item=>{
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    q.addEventListener('click', ()=>{
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(o=>{
-        o.classList.remove('open');
-        o.querySelector('.faq-a').style.maxHeight = null;
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(o => {
+          o.classList.remove('open');
+          o.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+        }
       });
-      if(!isOpen){
-        item.classList.add('open');
-        a.style.maxHeight = a.scrollHeight + 'px';
+    });
+
+    // Testimonial nav (RTL: "next" scrolls toward negative/left)
+    const track = document.getElementById('testiTrack');
+    const cardWidth = 402;
+    document.getElementById('testiNext').addEventListener('click', () => track.scrollBy({ left: -cardWidth, behavior: 'smooth' }));
+    document.getElementById('testiPrev').addEventListener('click', () => track.scrollBy({ left: cardWidth, behavior: 'smooth' }));
+
+    // Contact form submission (Web3Forms)
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'שולח...';
+      formStatus.style.display = 'none';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm)
+        });
+        const data = await res.json();
+        if (data.success) {
+          formStatus.textContent = 'הפנייה נשלחה בהצלחה! ניצור איתכם קשר בהקדם.';
+          formStatus.style.color = '#2e7d32';
+          contactForm.reset();
+        } else {
+          throw new Error(data.message || 'שגיאה בשליחה');
+        }
+      } catch (err) {
+        formStatus.textContent = 'אירעה שגיאה בשליחת הטופס. נסו שוב או צרו קשר בטלפון.';
+        formStatus.style.color = '#c62828';
+      } finally {
+        formStatus.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'בקשת פגישת ייעוץ';
       }
     });
-  });
 
-  // Testimonial nav (RTL: "next" scrolls toward negative/left)
-  const track = document.getElementById('testiTrack');
-  const cardWidth = 402;
-  document.getElementById('testiNext').addEventListener('click', ()=> track.scrollBy({left:-cardWidth, behavior:'smooth'}));
-  document.getElementById('testiPrev').addEventListener('click', ()=> track.scrollBy({left:cardWidth, behavior:'smooth'}));
-
-  // Contact form submission (Web3Forms)
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  contactForm.addEventListener('submit', async (e)=>{
-    e.preventDefault();
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'שולח...';
-    formStatus.style.display = 'none';
-
-    try{
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(contactForm)
-      });
-      const data = await res.json();
-      if(data.success){
-        formStatus.textContent = 'הפנייה נשלחה בהצלחה! ניצור איתכם קשר בהקדם.';
-        formStatus.style.color = '#2e7d32';
-        contactForm.reset();
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav.primary');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = nav.style.display === 'flex';
+      if (isOpen) {
+        nav.style.display = 'none';
       } else {
-        throw new Error(data.message || 'שגיאה בשליחה');
+        nav.style.cssText = 'display:flex; position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column; padding:20px 32px; gap:18px; border-bottom:1px solid #E7E1D4;';
       }
-    } catch(err){
-      formStatus.textContent = 'אירעה שגיאה בשליחת הטופס. נסו שוב או צרו קשר בטלפון.';
-      formStatus.style.color = '#c62828';
-    } finally {
-      formStatus.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'בקשת פגישת ייעוץ';
-    }
-  });
-
-  // Mobile menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('nav.primary');
-  menuToggle.addEventListener('click', ()=>{
-    const isOpen = nav.style.display === 'flex';
-    if(isOpen){
-      nav.style.display = 'none';
-    } else {
-      nav.style.cssText = 'display:flex; position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column; padding:20px 32px; gap:18px; border-bottom:1px solid #E7E1D4;';
-    }
-  });
-</script>
+    });
+  </script>
 
 </body>
+
 </html>
